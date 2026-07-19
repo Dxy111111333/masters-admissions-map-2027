@@ -69,13 +69,20 @@ export default async function ProgramPage({ params, searchParams }: ProgramPageP
           <div className="fact-budget"><span>预计总预算</span><strong>{formatCny(program.totalEstimatedCostCny, true)}</strong><small>{formatOriginal(program.totalEstimatedCost, program.tuitionCurrency)}</small></div>
         </section>
 
+        <nav className="detail-subnav" aria-label="项目详情导航">
+          <a href="#requirements"><span>01</span><strong>入学要求</strong><small>语言、学术与申请时间</small></a>
+          <a href="#budget-detail"><span>02</span><strong>预算明细</strong><small>完整学制费用构成</small></a>
+          <a href="#official-links"><span>03</span><strong>官方入口</strong><small>项目、申请与证据链接</small></a>
+        </nav>
+
         <div className="detail-layout">
-          <div><RequirementPanels program={program}/><BudgetBreakdown program={program}/></div>
-          <aside className="application-rail">
+          <RequirementPanels program={program}/>
+          <aside className="application-rail" id="official-links">
             {program.officialApplicationUrl && <div className="apply-card"><span>OFFICIAL APPLICATION</span><h2>从大学官方入口开始申请</h2><p>链接已核对为院校官方域名；将于新标签页打开。</p><a className="apply-button" href={program.officialApplicationUrl} target="_blank" rel="noopener noreferrer">立即申请 / Apply Now <ExternalIcon /></a></div>}
             <div className="official-links"><h3>官方链接</h3>{officialLinks.map(([label, url]) => <a href={url ?? undefined} target="_blank" rel="noopener noreferrer" key={label}>{label}<ExternalIcon /></a>)}</div>
           </aside>
         </div>
+        <BudgetBreakdown program={program}/>
       </main>
     </>
   );

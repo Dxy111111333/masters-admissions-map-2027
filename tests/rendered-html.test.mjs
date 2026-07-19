@@ -8,7 +8,7 @@ const catalog = JSON.parse(await readFile(new URL("../data/programs.json", impor
 test("exports the generic interactive admissions homepage", async () => {
   const html = await readFile(new URL("index.html", root), "utf8");
   assert.match(html, /探索适合你的/);
-  assert.match(html, /INTERACTIVE GLOBE/);
+  assert.match(html, /全球院校卫星地图/);
   assert.match(html, /个性化筛选/);
   assert.match(html, /推荐项目/);
   assert.doesNotMatch(html, /陈昕洋|CXY88888888|输入访问密码/);
@@ -20,6 +20,7 @@ test("exports a real detail page for every program", async () => {
     assert.match(html, new RegExp(program.universityNameZh));
     assert.match(html, /入学要求/);
     assert.match(html, /预算明细/);
+    assert.match(html, /项目详情导航/);
     assert.doesNotMatch(html, /申请入口待核实|数据可信度|部分信息待核实/);
     assert.doesNotMatch(html, /陈昕洋|CXY88888888/);
   }

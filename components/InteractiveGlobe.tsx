@@ -132,7 +132,9 @@ export function InteractiveGlobe({ regions, selected, onToggle }: { regions: Glo
           dragRotate: true,
           renderWorldCopies: false,
           fadeDuration: 220,
+          cooperativeGestures: false,
         });
+        map.scrollZoom.enable();
         mapRef.current = map;
         map.addControl(new maplibregl.NavigationControl({ showCompass: true, showZoom: true }), "bottom-right");
         map.addControl(new maplibregl.AttributionControl({ compact: true }), "bottom-left");
@@ -229,17 +231,11 @@ export function InteractiveGlobe({ regions, selected, onToggle }: { regions: Glo
   const resetGlobe = () => mapRef.current?.flyTo({ center: GLOBAL_VIEW, zoom: 1.25, bearing: 0, pitch: 0, duration: 1200, essential: true });
 
   return (
-    <section className="globe-card" aria-labelledby="map-heading">
+    <section className="globe-card" aria-label="全球院校卫星地图">
       <div className="globe-map-shell">
         <div ref={mapHostRef} className="globe-map" role="application" aria-label="真实卫星地球，可拖动并使用滚轮缩放查看院校位置" />
         {!mapReady && !mapError ? <div className="map-loading" aria-live="polite"><span /><p>正在连接卫星地图</p></div> : null}
         {mapError ? <div className="map-error" role="status"><strong>卫星地图暂未加载</strong><p>请检查网络连接，右侧筛选与地区快捷入口仍可正常使用。</p></div> : null}
-
-        <div className="globe-heading">
-          <span>LIVE GEOGRAPHIC VIEW</span>
-          <h2 id="map-heading">在真实世界里<br />找到你的学校</h2>
-          <p>拖动探索地球，滚轮放大后自动进入地区平面图。</p>
-        </div>
 
         <div className="map-status" aria-live="polite">
           <span className="map-online-dot" />
@@ -248,7 +244,6 @@ export function InteractiveGlobe({ regions, selected, onToggle }: { regions: Glo
 
         {mode === "map" ? <button className="return-globe" type="button" onClick={resetGlobe}><span aria-hidden="true">↙</span> 返回全球视图</button> : null}
 
-        <div className="map-zoom-guide" aria-hidden="true"><span className="mouse-glyph">↕</span><p><strong>滚轮缩放</strong><small>放大至地区后显示大学位置</small></p></div>
       </div>
 
       <nav className="globe-accessible-points" aria-label="地图目的地快捷选择">

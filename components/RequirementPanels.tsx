@@ -20,7 +20,7 @@ export function RequirementPanels({ program }: { program: Program }) {
   ].filter((item) => item.value);
 
   return (
-    <section className="detail-section requirements-section">
+    <section className="detail-section requirements-section" id="requirements">
       <div className="detail-section-heading"><div><span>ENTRY REQUIREMENTS</span><h2>入学要求</h2></div><p>每项均尽量保留官网表达，并在相邻位置附上来源入口。</p></div>
       <div className="requirement-list">
         <details className="requirement-panel" open>

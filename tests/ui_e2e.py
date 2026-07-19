@@ -37,12 +37,13 @@ with sync_playwright() as playwright:
     assert desktop.get_by_text("个性化筛选", exact=True).is_visible()
     discovery_box = desktop.locator(".discovery-section").bounding_box()
     filter_box = desktop.locator(".filter-panel").bounding_box()
-    assert discovery_box and discovery_box["height"] <= 832, discovery_box
+    assert discovery_box and discovery_box["height"] >= 824, discovery_box
     assert filter_box and filter_box["height"] <= discovery_box["height"], filter_box
-    assert discovery_box["y"] >= 68 and discovery_box["y"] + discovery_box["height"] <= 902, discovery_box
+    assert discovery_box["y"] >= 68, discovery_box
     desktop.locator(".map-loading").wait_for(state="hidden", timeout=10000)
     desktop.wait_for_timeout(1200)
     desktop.screenshot(path=SCREENSHOT_DIR / "filter-desktop-globe.png", full_page=False)
+    page_scroll_before_map = desktop.evaluate("window.scrollY")
     zoom_before = desktop.locator(".map-status strong").inner_text()
     desktop.locator(".globe-map").hover()
     for _ in range(6):
@@ -50,8 +51,15 @@ with sync_playwright() as playwright:
         desktop.wait_for_timeout(160)
     desktop.wait_for_timeout(900)
     assert desktop.locator(".map-status strong").inner_text() != zoom_before
+    assert abs(desktop.evaluate("window.scrollY") - page_scroll_before_map) <= 2, "Map wheel must zoom without scrolling the page"
     assert desktop.get_by_text("地区平面视图", exact=True).is_visible()
     assert desktop.locator(".university-map-marker.is-visible").count() > 0
+    desktop.locator(".filter-panel-heading").hover()
+    desktop.mouse.wheel(0, 700)
+    desktop.wait_for_timeout(400)
+    assert desktop.evaluate("window.scrollY") > page_scroll_before_map + 40, "Wheel outside the map must scroll the page"
+    desktop.evaluate("document.querySelector('#filters').scrollIntoView({block: 'start'})")
+    desktop.wait_for_timeout(350)
     desktop.locator(".globe-accessible-points button", has_text="英国").click()
     desktop.wait_for_timeout(1500)
     desktop.screenshot(path=SCREENSHOT_DIR / "filter-desktop.png", full_page=False)
@@ -81,10 +89,18 @@ with sync_playwright() as playwright:
     assert detail_href and "budgetmin=" in detail_href and "qsmax=" in detail_href
     desktop.locator(".detail-button").first.click()
     desktop.wait_for_load_state("networkidle")
-    assert desktop.get_by_text("入学要求", exact=True).is_visible()
-    assert desktop.get_by_text("预算明细", exact=True).is_visible()
+    assert desktop.get_by_role("heading", name="入学要求", exact=True).is_visible()
+    assert desktop.get_by_role("heading", name="预算明细", exact=True).is_visible()
     assert desktop.get_by_text("毕业要求", exact=True).is_visible()
     assert desktop.locator(".budget-donut").is_visible()
+    assert desktop.locator(".detail-subnav a").count() == 3
+    aligned_sections = [desktop.locator(selector).bounding_box() for selector in [".program-hero", ".study-structure", ".core-facts", ".detail-subnav", ".budget-section"]]
+    assert all(box for box in aligned_sections)
+    detail_left = aligned_sections[0]["x"]
+    detail_width = aligned_sections[0]["width"]
+    assert all(abs(box["x"] - detail_left) <= 1 and abs(box["width"] - detail_width) <= 1 for box in aligned_sections[1:]), aligned_sections
+    assert float(desktop.locator(".requirement-panel summary span").first.evaluate("element => getComputedStyle(element).fontSize.replace('px', '')")) >= 17
+    assert float(desktop.locator(".requirement-body > p").first.evaluate("element => getComputedStyle(element).fontSize.replace('px', '')")) >= 14
     assert desktop.get_by_text("数据可信度", exact=True).count() == 0
     assert desktop.get_by_text("申请入口待核实", exact=True).count() == 0
     for link in desktop.locator(".official-links a").all():
@@ -99,12 +115,13 @@ with sync_playwright() as playwright:
 
     laptop = browser.new_page(viewport={"width": 1366, "height": 768}, device_scale_factor=1)
     attach(laptop)
-    laptop.goto(BASE_URL, wait_until="networkidle")
+    laptop.goto(BASE_URL, wait_until="domcontentloaded", timeout=60000)
+    laptop.wait_for_timeout(1200)
     laptop.get_by_role("button", name="开始探索").click()
     laptop.wait_for_timeout(700)
     laptop_box = laptop.locator(".discovery-section").bounding_box()
     assert laptop_box and laptop_box["y"] >= 68, laptop_box
-    assert laptop_box["y"] + laptop_box["height"] <= 770, laptop_box
+    assert laptop_box["height"] >= 690, laptop_box
     assert laptop.locator(".filter-panel-heading").is_visible()
     assert_no_horizontal_overflow(laptop)
     laptop.locator(".map-loading").wait_for(state="hidden", timeout=10000)
@@ -113,7 +130,8 @@ with sync_playwright() as playwright:
 
     mobile = browser.new_page(viewport={"width": 390, "height": 844}, device_scale_factor=1)
     attach(mobile)
-    mobile.goto(BASE_URL, wait_until="networkidle")
+    mobile.goto(BASE_URL, wait_until="domcontentloaded", timeout=60000)
+    mobile.wait_for_timeout(800)
     assert mobile.get_by_role("button", name="开始探索").is_visible()
     assert_no_horizontal_overflow(mobile)
     mobile.screenshot(path=SCREENSHOT_DIR / "home-mobile.png", full_page=False)
