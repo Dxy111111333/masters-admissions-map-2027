@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root{--ink:#142527;--paper:#f2efe6;--line:rgba(20,37,39,.17);--muted:#6d7471}
+*{box-sizing:border-box}
+html{background:var(--paper);scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:var(--paper);color:var(--ink);font-family:"Noto Sans CJK SC","Microsoft YaHei UI",Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.38;background-image:radial-gradient(rgba(20,37,39,.11) .55px,transparent .7px);background-size:7px 7px}
+a{color:inherit}
+.shell{width:min(1240px,calc(100% - 36px));margin:auto;position:relative}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);animation:soft-arrive .55s cubic-bezier(.22,1,.36,1) both}
+.brand{font:800 15px "Times New Roman",serif;letter-spacing:.12em}
+.edition{font:700 10px "Times New Roman",serif;letter-spacing:.15em;color:var(--muted)}
+.hero{padding:11vh 0 7vh;animation:hero-arrive .72s .05s cubic-bezier(.22,1,.36,1) both}
+.eyebrow{font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:#456462;font-weight:800}
+.hero h1{font:900 clamp(50px,8vw,106px)/.92 "Noto Serif CJK SC","Songti SC",Georgia,serif;letter-spacing:-.07em;margin:24px 0 25px}
+.hero h1 em{font-style:normal;color:#006d77}
+.hero-foot{display:flex;justify-content:space-between;align-items:end;gap:30px}
+.hero-foot>p{color:var(--muted);font-size:16px;margin:0}
+.stats{display:flex;border-block:1px solid var(--line);animation:soft-arrive .55s .22s cubic-bezier(.22,1,.36,1) both}
+.stats span{padding:10px 16px;color:var(--muted);font-size:11px;border-right:1px solid var(--line)}
+.stats span:last-child{border-right:0}
+.stats strong{color:var(--ink);font:800 18px "Times New Roman",serif;margin-right:4px}
+.regions{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line);border-left:1px solid var(--line);margin-bottom:7vh}
+.region-card{min-height:250px;padding:32px;display:grid;grid-template-columns:54px 1fr;grid-template-rows:1fr auto;gap:22px;color:inherit;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(255,255,255,.34);position:relative;overflow:hidden;transition:transform .38s cubic-bezier(.22,1,.36,1),box-shadow .38s cubic-bezier(.22,1,.36,1),background-color .25s;animation:card-arrive .62s var(--delay,0ms) cubic-bezier(.22,1,.36,1) both}
+.region-card:last-child:nth-child(odd){grid-column:1/-1}
+.region-card:before{content:"";position:absolute;inset:0 auto 0 0;width:6px;background:var(--region);transform:scaleY(.24);transform-origin:bottom;transition:transform .25s}
+.region-card:after{content:"";position:absolute;width:240px;height:240px;right:-150px;bottom:-175px;border-radius:50%;background:var(--region);opacity:0;transform:scale(.78);transition:opacity .35s,transform .5s cubic-bezier(.22,1,.36,1);pointer-events:none}
+.region-card:hover,.region-card:focus-visible{transform:translateY(-7px);box-shadow:0 22px 50px rgba(20,37,39,.12);background:rgba(255,255,255,.55);z-index:2;outline:none}
+.region-card:hover:before,.region-card:focus-visible:before{transform:scaleY(1)}
+.region-card:hover:after,.region-card:focus-visible:after{opacity:.055;transform:scale(1)}
+.number{font:700 18px "Times New Roman",serif;color:var(--region)}
+.region-card small{color:var(--region);letter-spacing:.12em;font-size:9px;font-weight:800}
+.region-card h2{font:900 52px/1 "Noto Serif CJK SC","Songti SC",Georgia,serif;margin:19px 0 12px}
+.region-card p{color:var(--muted);font-size:13px;margin:0 0 18px}
+.region-meta{font-size:11px;color:var(--muted)}
+.enter{grid-column:2;font-size:12px;justify-self:end;border-bottom:1px solid currentColor;transition:transform .28s cubic-bezier(.22,1,.36,1)}
+.region-card:hover .enter,.region-card:focus-visible .enter{transform:translateX(4px)}
+.footer{display:flex;justify-content:space-between;gap:20px;padding:28px 0 45px;border-top:1px solid var(--line);font-size:11px;color:var(--muted)}
+@keyframes hero-arrive{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes soft-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@keyframes card-arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@media(max-width:760px){.regions{grid-template-columns:1fr}.region-card:last-child:nth-child(odd){grid-column:auto}.region-card{min-height:215px}.hero{padding-top:8vh}.hero-foot{align-items:flex-start;flex-direction:column}.stats{width:100%;overflow:auto}.topbar{align-items:flex-start;gap:18px;flex-direction:column}.footer{flex-direction:column}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
