@@ -1,5 +1,5 @@
 {
-  "name": "site-creator-vinext-starter",
+  "name": "study-compass-masters-platform",
   "version": "0.1.0",
   "private": true,
   "packageManager": "pnpm@11.9.0",
@@ -7,15 +7,19 @@
     "node": ">=22.13.0"
   },
   "scripts": {
-    "dev": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext dev",
-    "build": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext build",
-    "start": "WRANGLER_LOG_PATH=.wrangler/wrangler.log vinext start",
-    "test": "npm run build && node --test tests/rendered-html.test.mjs",
+    "dev": "vinext dev",
+    "build": "vinext build",
+    "data:migrate": "node scripts/migrate-legacy-data.mjs",
+    "build:static": "pnpm data:migrate && pnpm build && node scripts/export-static-site.mjs",
+    "preview:static": "node scripts/serve-static.mjs",
+    "start": "vinext start",
+    "test": "pnpm build:static && node --test tests/*.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
     "drizzle-orm": "0.45.2",
+    "maplibre-gl": "5.24.0",
     "next": "16.2.6",
     "react": "19.2.6",
     "react-dom": "19.2.6"

@@ -26,6 +26,21 @@
     @media(max-width:1050px){.metrics{grid-template-columns:repeat(3,1fr)}.visuals{grid-template-columns:1fr}.toolbar-inner{grid-template-columns:1fr 1fr}.cards{grid-template-columns:1fr}}
     @media(max-width:650px){.shell{width:min(100% - 22px,1440px)}.topbar{align-items:flex-start;flex-direction:column}.hero{padding-top:42px}.hero h1{font-size:58px}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(2n){border-right:0}.toolbar-inner{grid-template-columns:1fr}.card{padding:20px}.card-head{grid-template-columns:82px 1fr 58px}.qs-badge strong{font-size:27px}.duration-badge{font-size:15px}.priority-grid{grid-template-columns:1fr}.language-card,.scholarship-card{grid-column:1}.language-facts{grid-template-columns:1fr}.language-fact{grid-template-columns:92px 1fr}.detail-grid{grid-template-columns:1fr}.cost-row{grid-template-columns:78px 1fr 58px}.cost-summary{grid-template-columns:1fr}.post-cost{text-align:left}footer{grid-template-columns:1fr}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}}@media print{body:before,.toolbar,.nav,.excel-link{display:none}.card{break-inside:avoid}.cards{grid-template-columns:1fr 1fr}.details{display:block}.hero{padding-top:20px}}
+    /* Refined project-card hierarchy: university first, explicit QS context, clearer fact labels. */
+    .card-head{grid-template-columns:minmax(0,1fr) 164px;gap:24px}
+    .qs-badge{border-right:0;border-left:1px solid var(--line);padding:2px 0 2px 20px}
+    .qs-badge span{display:inline-block;padding:5px 7px;background:var(--accent);color:#fff;font-size:9px;font-weight:900;line-height:1.25;letter-spacing:.06em;text-transform:none}
+    .qs-badge strong{font-size:clamp(26px,2.5vw,36px);margin:10px 0 6px;overflow-wrap:anywhere}
+    .qs-badge small{font-size:11px;font-weight:700;line-height:1.35}
+    .uni{font:900 24px/1.2 "Noto Serif CJK SC","Songti SC",serif;color:var(--ink);letter-spacing:-.025em}
+    .program{font:750 18px/1.38 "Noto Serif CJK SC","Songti SC",serif;color:var(--accent);margin:10px 0 7px}
+    .location{font-size:12px;line-height:1.45}
+    .priority-grid{gap:12px;margin:20px 0}
+    .info-card{padding:18px;min-height:154px}
+    .info-card h4{margin:0 0 14px;padding-bottom:10px;border-bottom:1px solid var(--line);font:900 19px/1.2 "Noto Serif CJK SC","Songti SC",serif;letter-spacing:-.01em}
+    .info-line{display:grid;grid-template-columns:100px minmax(0,1fr);gap:12px;align-items:start;margin:11px 0;color:#4f5b58;font-size:12px;line-height:1.55}
+    .info-line b{display:block;color:var(--ink);font-size:15px;line-height:1.25;letter-spacing:0}
+    @media(max-width:650px){.card-head{grid-template-columns:1fr;gap:16px}.qs-badge{border-left:0;border-top:1px solid var(--line);padding:14px 0 0}.qs-badge strong{font-size:30px}.uni{font-size:21px}.program{font-size:17px}.info-line{grid-template-columns:96px minmax(0,1fr)}}
   </style>
 </head>
 <body>
@@ -133,22 +148,20 @@
     }
     function card(p,index){
       const pct=Number.isFinite(p.totalRmb)?Math.min(100,p.totalRmb/550000*100):0;
-      const qsChip=p.qsIndependent===false?'<span class="chip warn">QS综合榜未独立列名</span>':p.top200?'<span class="chip good">QS 前200</span>':'<span class="chip warn">QS 200外</span>';
-      const durationChip=p.duration.includes("2年")?'<span class="chip bad">2年制排除</span>':p.duration==="1.5年"?'<span class="chip warn">1.5年</span>':'<span class="chip good">1年制</span>';
-      const durationMark=Number.isFinite(p.months)?p.months+'M':'—';
+      const durationAlert=p.excluded?'<span class="chip bad">学制不符合筛选</span>':'';
       const scholarshipLink=p.scholarshipUrl?'<a class="scholarship-link" href="'+p.scholarshipUrl+'" target="_blank" rel="noreferrer">奖学金官网 ↗</a>':'<span class="pending-link">官方链接待确认</span>';
       const scholarshipAmount=p.scholarshipRmb>0?'<div class="scholarship-amount">'+money(p.scholarshipRmb)+'</div>':'<div class="info-line"><b>预算计入</b>暂未计入确定金额</div>';
       const testText=[p.test,p.cet&&p.cet!=="否"?'CET：'+p.cet:''].filter(Boolean).join('；');
       const languageFacts=p.language.facts.map(f=>'<div class="language-fact '+f[2]+'"><span>'+f[0]+'</span><strong>'+f[1]+'</strong></div>').join('');
       return '<article class="card reveal" style="--status-color:'+statusColor(p)+';--card-delay:'+(index*45)+'ms">'+
-        '<div class="card-head"><div class="qs-badge"><span>QS 2027</span><strong>'+p.qsRank+'</strong><small>'+(p.qsIndependent===false?'NOT SEPARATELY RANKED':p.top200?'TOP 200':'OUTSIDE 200')+'</small></div><div><div class="uni">'+p.university+' · '+p.city+'</div><h3 class="program">'+p.program+'</h3><div class="location">'+p.programShort+' · '+p.category+'</div></div><div class="duration-badge '+(p.excluded?'excluded':'')+'">'+durationMark+'<small>'+p.duration+'</small></div></div>'+
-        '<div class="chips">'+qsChip+durationChip+'<span class="chip '+statusClass(p)+'">'+p.budgetStatus+'</span></div>'+
+        '<div class="card-head"><div><div class="uni">'+p.university+'</div><h3 class="program">'+p.program+'</h3><div class="location">'+p.city+' · '+p.programShort+' · '+p.category+'</div></div><div class="qs-badge"><span>QS 2027 世界大学排名</span><strong>'+p.qsRank+'</strong><small>'+(p.qsIndependent===false?'校区未独立列名':p.top200?'全球 TOP 200':'全球 200 名外')+'</small></div></div>'+
+        '<div class="chips">'+durationAlert+'<span class="chip '+statusClass(p)+'">'+p.budgetStatus+'</span></div>'+
         '<div class="cost-block"><div class="cost-summary"><div class="cost-main"><span>预计总成本</span><strong>'+(Number.isFinite(p.totalRmb)?money(p.totalRmb):'未测算')+'</strong><small>'+(Number.isFinite(p.totalRmb)?'约 '+(p.totalRmb/10000).toFixed(1)+' 万元':'需按完整学制重算')+'</small></div><div class="post-cost"><span>奖后预算场景</span><strong>'+(Number.isFinite(p.postRmb)?money(p.postRmb):'—')+'</strong></div></div>'+(Number.isFinite(p.totalRmb)?'<div class="meter"><div class="meter-fill" style="--pct:'+pct+'%"></div></div>':'')+'<div class="cost-actions">'+costBreakdown(p)+'</div></div>'+
         '<div class="priority-grid">'+
-          '<section class="info-card"><h4>01 · 学制</h4><div class="info-line"><b>标准时长</b>'+p.duration+'</div><div class="info-line"><b>学习模式</b>'+p.mode+'</div><div class="info-line"><b>入学时间</b>'+p.intake+'</div></section>'+
-          '<section class="info-card"><h4>02 · 毕业要求</h4><div class="info-line"><b>学分</b>'+p.credits+'</div><div class="info-line"><b>课程/论文</b>'+p.structure+'；'+p.capstone+'</div><div class="info-line"><b>完成要求</b>'+p.completion+'</div></section>'+
-          '<section class="info-card language-card"><h4>03 · 语言成绩与官网细则</h4><div class="language-score">'+p.language.summary+'</div><div class="language-detail">'+p.language.detail+'</div><div class="language-facts">'+languageFacts+'</div><a class="evidence-link" href="'+p.language.url+'" target="_blank" rel="noreferrer">查看大学官网语言证据 ↗</a></section>'+
-          '<section class="info-card scholarship-card"><h4>04 · 奖学金</h4><div class="info-line"><b>状态</b>'+p.scholarshipStatus+'</div>'+scholarshipAmount+'<div class="info-line"><b>评审方式</b>'+(p.autoScholarship==='是'?'随录取自动评审':'可能需要单独申请或确认')+'</div>'+scholarshipLink+'</section>'+
+          '<section class="info-card"><h4>学制</h4><div class="info-line"><b>标准时长</b>'+p.duration+'</div><div class="info-line"><b>学习模式</b>'+p.mode+'</div><div class="info-line"><b>入学时间</b>'+p.intake+'</div></section>'+
+          '<section class="info-card"><h4>毕业要求</h4><div class="info-line"><b>学分</b>'+p.credits+'</div><div class="info-line"><b>课程/论文</b>'+p.structure+'；'+p.capstone+'</div><div class="info-line"><b>完成要求</b>'+p.completion+'</div></section>'+
+          '<section class="info-card language-card"><h4>语言成绩与官网细则</h4><div class="language-score">'+p.language.summary+'</div><div class="language-detail">'+p.language.detail+'</div><div class="language-facts">'+languageFacts+'</div><a class="evidence-link" href="'+p.language.url+'" target="_blank" rel="noreferrer">查看大学官网语言证据 ↗</a></section>'+
+          '<section class="info-card scholarship-card"><h4>奖学金</h4><div class="info-line"><b>状态</b>'+p.scholarshipStatus+'</div>'+scholarshipAmount+'<div class="info-line"><b>评审方式</b>'+(p.autoScholarship==='是'?'随录取自动评审':'可能需要单独申请或确认')+'</div>'+scholarshipLink+'</section>'+
         '</div>'+
         '<details class="details"><summary>更多申请信息</summary><div class="detail-grid"><div><b>本科背景</b>'+p.bachelor+'</div><div><b>其他考试</b>'+(testText||'官网未列额外考试')+'</div><div><b>截止日期</b>'+p.deadline+'</div><div><b>复核状态</b>'+p.review+'</div><div class="notes"><b>数据说明</b>'+p.notes+'</div><div class="links"><a href="'+p.programUrl+'" target="_blank" rel="noreferrer">项目官网 ↗</a><a href="'+p.language.url+'" target="_blank" rel="noreferrer">语言要求官网 ↗</a><a href="'+p.qsUrl+'" target="_blank" rel="noreferrer">QS排名页 ↗</a></div></div></details></article>';
     }
