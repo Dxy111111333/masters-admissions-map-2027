@@ -8,6 +8,7 @@ const outputDirectory = path.join(projectRoot, "data");
 const outputPath = path.join(outputDirectory, "programs.json");
 const additionalProgramsPath = path.join(projectRoot, "content", "additional-programs.json");
 const curatedExpansionPath = path.join(projectRoot, "content", "program-expansion.json");
+const cuhkProgramsPath = path.join(projectRoot, "content", "cuhk-programs.json");
 
 const regionMeta = {
   香港: { country: "中国", region: "中国香港", code: "hk", currency: "HKD" },
@@ -469,6 +470,13 @@ try {
 try {
   const curatedCatalog = JSON.parse(await readFile(curatedExpansionPath, "utf8"));
   if (Array.isArray(curatedCatalog.programs)) programs.push(...curatedCatalog.programs.map(normalizeCuratedProgram));
+} catch (error) {
+  if (error?.code !== "ENOENT") throw error;
+}
+
+try {
+  const cuhkCatalog = JSON.parse(await readFile(cuhkProgramsPath, "utf8"));
+  if (Array.isArray(cuhkCatalog.programs)) programs.push(...cuhkCatalog.programs.map(normalizeCuratedProgram));
 } catch (error) {
   if (error?.code !== "ENOENT") throw error;
 }

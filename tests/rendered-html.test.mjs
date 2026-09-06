@@ -11,7 +11,8 @@ test("exports the generic interactive admissions homepage", async () => {
   assert.match(html, /探索适合你的/);
   assert.match(html, /全球院校卫星地图/);
   assert.match(html, /个性化筛选/);
-  assert.match(html, /推荐项目/);
+  assert.match(html, /推荐院校/);
+  assert.match(html, /搜索院校/);
   assert.doesNotMatch(html, /陈昕洋|CXY88888888|输入访问密码/);
 });
 

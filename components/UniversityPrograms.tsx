@@ -1,8 +1,8 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ArrowIcon } from "@/components/Icons";
-import { formatCny } from "@/lib/formatters";
+import { ArrowIcon, ExternalIcon } from "@/components/Icons";
+import { formatCny, formatQs } from "@/lib/formatters";
 import type { Program } from "@/lib/types";
 
 const categoryOptions = ["全部", "Economics", "Finance", "Accounting", "Management", "Marketing", "Analytics", "International Business", "Supply Chain", "MBA"] as const;
@@ -37,8 +37,19 @@ export function UniversityPrograms({ programs }: { programs: Program[] }) {
           <div className="program-card-top"><span>{categoryFor(program)}</span><span>{program.verificationStatus === "verified" ? "已核对" : "待复核"}</span></div>
           <h3>{program.programNameEn}</h3>
           {program.programNameZh && <p className="program-card-zh">{program.programNameZh}</p>}
-          <p className="program-card-meta">{[program.degreeType, program.durationText ?? program.durationLabel, program.intake].filter(Boolean).join(" · ") || "学制与入学批次以项目官网为准"}</p>
-          <div className="program-card-bottom"><strong>{formatCny(program.totalEstimatedCostCny, true)}</strong><a href={`/program/${encodeURIComponent(program.programId)}/`}>查看专业要求 <ArrowIcon /></a></div>
+          <div className="program-card-facts" aria-label="专业核心字段">
+            <div><span>学制</span><strong>{program.durationText ?? program.durationLabel ?? "待核实"}</strong><small>{program.academicYear ?? program.intake ?? "入学批次待核实"}</small></div>
+            <div><span>学分</span><strong>{program.credits ?? "待核实"}</strong><small>{program.completionRequirement ? "按培养方案完成" : "毕业要求见详情"}</small></div>
+            <div><span>院校排名</span><strong>{formatQs(program.qsRank, program.qsRankLabel)}</strong><small>{program.qsYear ? `${program.qsYear} QS WUR` : "未独立列名"}</small></div>
+            <div><span>预算</span><strong>{formatCny(program.totalEstimatedCostCny, true)}</strong><small>完整学制估算</small></div>
+          </div>
+          <div className="program-card-requirements">
+            <div><span>语言</span><p>{program.languageRequirementRaw ?? "按项目官网核对"}</p></div>
+            <div><span>学术 / GPA</span><p>{program.academicRequirementOriginal ?? program.academicRequirement ?? "按项目官网核对"}</p></div>
+            <div><span>申请时间</span><p>{program.applicationDeadline ?? program.admissionCycle ?? "申请日期待公布"}</p></div>
+          </div>
+          <details className="program-card-costs"><summary>查看预算明细</summary><div>{program.costBreakdown.length ? program.costBreakdown.map((item) => <p key={item.key}><span>{item.label}</span><strong>{formatCny(item.amountCny, true)}</strong></p>) : <p>暂无完整预算明细</p>}</div></details>
+          <div className="program-card-bottom"><strong>{formatCny(program.totalEstimatedCostCny, true)}</strong><div><a href={`/program/${encodeURIComponent(program.programId)}/`}>查看专业要求 <ArrowIcon /></a>{program.officialApplicationUrl && <a className="program-apply-link" href={program.officialApplicationUrl} target="_blank" rel="noopener noreferrer">立即申请 <ExternalIcon /></a>}</div></div>
         </article>)}
       </div>
       {!filtered.length && <div className="empty-state"><h3>没有找到对应专业</h3><p>可以清空关键词或切换分类。</p></div>}

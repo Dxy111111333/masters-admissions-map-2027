@@ -82,12 +82,18 @@ with sync_playwright() as playwright:
     desktop.wait_for_timeout(450)
     desktop.locator("#results").scroll_into_view_if_needed()
     desktop.wait_for_timeout(350)
-    assert desktop.locator(".program-row").count() > 0
+    assert desktop.locator(".university-result-row").count() > 0
     desktop.screenshot(path=SCREENSHOT_DIR / "results-desktop.png", full_page=False)
 
     detail_href = desktop.locator(".detail-button").first.get_attribute("href")
-    assert detail_href and "budgetmin=" in detail_href and "qsmax=" in detail_href
+    assert detail_href and "/university/" in detail_href and "budgetmin=" in detail_href and "qsmax=" in detail_href
     desktop.locator(".detail-button").first.click()
+    desktop.wait_for_load_state("networkidle")
+    assert desktop.get_by_role("heading", name="选择你感兴趣的专业", exact=True).is_visible()
+    assert desktop.locator(".university-program-card").count() > 0
+    program_href = desktop.locator(".university-program-card .program-card-bottom a").first.get_attribute("href")
+    assert program_href and "/program/" in program_href
+    desktop.locator(".university-program-card .program-card-bottom a").first.click()
     desktop.wait_for_load_state("networkidle")
     assert desktop.get_by_role("heading", name="入学要求", exact=True).is_visible()
     assert desktop.get_by_role("heading", name="预算明细", exact=True).is_visible()
@@ -111,7 +117,7 @@ with sync_playwright() as playwright:
 
     desktop.get_by_role("button", name="返回筛选结果").click()
     desktop.wait_for_load_state("networkidle")
-    assert desktop.locator(".program-row").count() > 0
+    assert desktop.locator(".university-result-row").count() > 0
 
     laptop = browser.new_page(viewport={"width": 1366, "height": 768}, device_scale_factor=1)
     attach(laptop)

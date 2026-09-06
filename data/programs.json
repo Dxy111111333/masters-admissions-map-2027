@@ -11831,6 +11831,1346 @@
       "sourceLastChecked": "2026-09-06",
       "verificationStatus": "needs_review",
       "verificationNotes": "项目页面明确列出分学期申请时间；具体2027费用和语言小分需按申请周期更新。"
+    },
+    {
+      "universityId": "uni-7sder8",
+      "programId": "hk-cuhk-msc-business-analytics",
+      "universityNameZh": "香港中文大学",
+      "universityNameEn": "The Chinese University of Hong Kong",
+      "universityShortName": "CUHK",
+      "programNameZh": null,
+      "programNameEn": "MSc in Business Analytics",
+      "programShortName": "MSc Business Analytics",
+      "subjectArea": "商业分析",
+      "subjectCategory": "Analytics",
+      "country": "中国",
+      "region": "中国香港",
+      "city": "香港沙田",
+      "degreeType": "MSc",
+      "studyMode": "全日制",
+      "durationMonths": 12,
+      "durationLabel": "1年",
+      "durationText": "1年",
+      "intake": "2027 Entry",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027/28",
+      "credits": "30 units",
+      "courseStructure": null,
+      "completionRequirement": "完成至少30 units；具体课程与毕业要求以项目培养方案为准",
+      "qsRank": 18,
+      "qsRankLabel": "18",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "认可大学学士学位；项目页面要求参照CUHK Graduate School general requirements",
+      "academicRequirementOriginal": "认可大学学士学位；项目页面要求参照CUHK Graduate School general requirements",
+      "academicScale": "official_text",
+      "minimumGpa": null,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": null,
+      "gradeRequirementSourceType": "manual_review",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "商业、经济、统计、计算机或其他定量背景有利，但最终以项目审核为准",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": null,
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "认可大学学士学位；项目页面要求参照CUHK Graduate School general requirements",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": null,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": null
+      },
+      "backgroundRequirements": {
+        "original": "商业、经济、统计、计算机或其他定量背景有利，但最终以项目审核为准",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": null,
+        "required": null,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "institutional_reference",
+      "tuitionAmount": 400000,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+      "applicationLinks": {
+        "program": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+        "admission": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "language": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "academic": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+        "tuition": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+        "deadline": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+        "application": "https://apply.bschool.cuhk.edu.hk/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6.5,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic 6.5（Test Centre based/Online）"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 79,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT 79/120（Internet-based/Home Edition）"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.5 · TOEFL iBT 79",
+      "languageRequirementDetails": "项目页指向CUHK Graduate School英语要求；IELTS/TOEFL有效期通常为2年，具体政策以Graduate School requirements为准。",
+      "languagePolicyFacts": [
+        {
+          "label": "Home Edition",
+          "value": "按Graduate School政策",
+          "tone": "pending"
+        },
+        {
+          "label": "IELTS OSR",
+          "value": "项目页未说明",
+          "tone": "pending"
+        },
+        {
+          "label": "有效期",
+          "value": "通常2年",
+          "tone": "good"
+        }
+      ],
+      "tuition": 400000,
+      "tuitionCny": 368000,
+      "tuitionCurrency": "HKD",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 46000,
+      "accommodationCost": 46000,
+      "insuranceCost": null,
+      "visaAndApplicationCost": 3680,
+      "transportCost": 7360,
+      "otherCost": 8280,
+      "totalEstimatedCost": 521000,
+      "totalEstimatedCostCny": 479320,
+      "exchangeRate": 0.92,
+      "exchangeRateDate": null,
+      "exchangeRateNote": "按规划估算汇率 HKD 1≈CNY 0.92；实际缴费以银行结算为准",
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": 368000,
+          "amountOriginal": 400000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "CUHK Graduate School programme page",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "官方页面未单列",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": 3680,
+          "amountOriginal": 4000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "申请与学生签证规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": 7360,
+          "amountOriginal": 8000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": 8280,
+          "amountOriginal": 9000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "教材、通讯及往返交通规划估算",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "学费取自CUHK项目页；住宿、生活、交通及其他为规划估算。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027轮次以项目官网公布为准",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "全部申请者",
+          "intake": "2027 Entry",
+          "deadlineType": "日期截止",
+          "officialUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics"
+        }
+      ],
+      "officialUniversityUrl": "https://www.cuhk.edu.hk/",
+      "officialProgramUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+      "officialRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialAcademicRequirementUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+      "officialLanguageRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialWorkExperienceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialDocumentRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/documents-required",
+      "officialDeadlineUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+      "officialFeeUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+      "officialApplicationUrl": "https://apply.bschool.cuhk.edu.hk/",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/chinese-university-hong-kong-cuhk",
+      "dataSource": [
+        "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-business-analytics",
+        "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "https://www.gs.cuhk.edu.hk/admissions/how-to-apply"
+      ],
+      "lastUpdated": "2026-09-06",
+      "sourceLastChecked": "2026-09-06",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "项目名称、全日制1年、30 units、HK$400,000学费及GMAT/GRE非强制来自CUHK官方项目页；截止日期和项目额外语言细则待2027申请轮次公布。"
+    },
+    {
+      "universityId": "uni-7sder8",
+      "programId": "hk-cuhk-msc-finance",
+      "universityNameZh": "香港中文大学",
+      "universityNameEn": "The Chinese University of Hong Kong",
+      "universityShortName": "CUHK",
+      "programNameZh": null,
+      "programNameEn": "MSc in Finance",
+      "programShortName": "MSc Finance",
+      "subjectArea": "金融",
+      "subjectCategory": "Finance",
+      "country": "中国",
+      "region": "中国香港",
+      "city": "香港沙田",
+      "degreeType": "MSc",
+      "studyMode": "全日制",
+      "durationMonths": 12,
+      "durationLabel": "1年",
+      "durationText": "1年",
+      "intake": "2027 Entry",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027/28",
+      "credits": "36 units",
+      "courseStructure": null,
+      "completionRequirement": "完成至少36 units；非全日制路径学制和学分另见项目页",
+      "qsRank": 18,
+      "qsRankLabel": "18",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+      "academicRequirementOriginal": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+      "academicScale": "official_text",
+      "minimumGpa": null,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": null,
+      "gradeRequirementSourceType": "manual_review",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "金融、经济、会计、数学或其他定量背景有利",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "全日制申请人优先考虑具备2年post-qualification full-time work experience者",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": null,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": null
+      },
+      "backgroundRequirements": {
+        "original": "金融、经济、会计、数学或其他定量背景有利",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "全日制申请人优先考虑具备2年post-qualification full-time work experience者",
+        "required": true,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "institutional_reference",
+      "tuitionAmount": 460000,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+      "applicationLinks": {
+        "program": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+        "admission": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "language": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "academic": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+        "tuition": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+        "deadline": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+        "application": "https://apply.bschool.cuhk.edu.hk/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6.5,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic 6.5（Test Centre based/Online）"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 79,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT 79/120（Internet-based/Home Edition）"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.5 · TOEFL iBT 79",
+      "languageRequirementDetails": "项目页指向CUHK Graduate School英语要求；语言成绩有效期和替代考试政策以Graduate School为准。",
+      "languagePolicyFacts": [
+        {
+          "label": "Home Edition",
+          "value": "按Graduate School政策",
+          "tone": "pending"
+        },
+        {
+          "label": "IELTS OSR",
+          "value": "项目页未说明",
+          "tone": "pending"
+        },
+        {
+          "label": "工作经验",
+          "value": "2年优先",
+          "tone": "good"
+        }
+      ],
+      "tuition": 460000,
+      "tuitionCny": 423200,
+      "tuitionCurrency": "HKD",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 46000,
+      "accommodationCost": 46000,
+      "insuranceCost": null,
+      "visaAndApplicationCost": 3680,
+      "transportCost": 7360,
+      "otherCost": 8280,
+      "totalEstimatedCost": 581000,
+      "totalEstimatedCostCny": 534520,
+      "exchangeRate": 0.92,
+      "exchangeRateDate": null,
+      "exchangeRateNote": "按规划估算汇率 HKD 1≈CNY 0.92；实际缴费以银行结算为准",
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": 423200,
+          "amountOriginal": 460000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "CUHK Graduate School programme page",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "官方页面未单列",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": 3680,
+          "amountOriginal": 4000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "申请与学生签证规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": 7360,
+          "amountOriginal": 8000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": 8280,
+          "amountOriginal": 9000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "教材、通讯及往返交通规划估算",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "学费取自CUHK项目页；其余为规划估算。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027轮次以项目官网公布为准",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "全部申请者",
+          "intake": "2027 Entry",
+          "deadlineType": "日期截止",
+          "officialUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance"
+        }
+      ],
+      "officialUniversityUrl": "https://www.cuhk.edu.hk/",
+      "officialProgramUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+      "officialRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialAcademicRequirementUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+      "officialLanguageRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialWorkExperienceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialDocumentRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/documents-required",
+      "officialDeadlineUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+      "officialFeeUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+      "officialApplicationUrl": "https://apply.bschool.cuhk.edu.hk/",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/chinese-university-hong-kong-cuhk",
+      "dataSource": [
+        "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-finance",
+        "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "https://www.gs.cuhk.edu.hk/admissions/how-to-apply"
+      ],
+      "lastUpdated": "2026-09-06",
+      "sourceLastChecked": "2026-09-06",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "项目页确认全日制1年、36 units、HK$460,000及2年工作经验优先；截止日期需按2027招生轮次更新。"
+    },
+    {
+      "universityId": "uni-7sder8",
+      "programId": "hk-cuhk-msc-management",
+      "universityNameZh": "香港中文大学",
+      "universityNameEn": "The Chinese University of Hong Kong",
+      "universityShortName": "CUHK",
+      "programNameZh": null,
+      "programNameEn": "MSc in Management",
+      "programShortName": "MSc Management",
+      "subjectArea": "管理学",
+      "subjectCategory": "Management",
+      "country": "中国",
+      "region": "中国香港",
+      "city": "香港沙田",
+      "degreeType": "MSc",
+      "studyMode": "全日制",
+      "durationMonths": 12,
+      "durationLabel": "1年",
+      "durationText": "1年",
+      "intake": "2027 Entry",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027/28",
+      "credits": "30 units",
+      "courseStructure": null,
+      "completionRequirement": "完成至少30 units；包括项目规定的capstone安排",
+      "qsRank": 18,
+      "qsRankLabel": "18",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+      "academicRequirementOriginal": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+      "academicScale": "official_text",
+      "minimumGpa": null,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": null,
+      "gradeRequirementSourceType": "manual_review",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "不限本科专业；管理、商业、经济及相关背景可作为申请基础",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": null,
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": null,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": null
+      },
+      "backgroundRequirements": {
+        "original": "不限本科专业；管理、商业、经济及相关背景可作为申请基础",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": null,
+        "required": null,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "institutional_reference",
+      "tuitionAmount": 435000,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+      "applicationLinks": {
+        "program": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+        "admission": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "language": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "academic": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+        "tuition": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+        "deadline": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+        "application": "https://apply.bschool.cuhk.edu.hk/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6.5,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic 6.5（Test Centre based/Online）"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 79,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT 79/120（Internet-based/Home Edition）"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.5 · TOEFL iBT 79",
+      "languageRequirementDetails": "项目页指向CUHK Graduate School英语要求；具体豁免及替代考试政策以Graduate School为准。",
+      "languagePolicyFacts": [
+        {
+          "label": "Home Edition",
+          "value": "按Graduate School政策",
+          "tone": "pending"
+        },
+        {
+          "label": "IELTS OSR",
+          "value": "项目页未说明",
+          "tone": "pending"
+        }
+      ],
+      "tuition": 435000,
+      "tuitionCny": 400200,
+      "tuitionCurrency": "HKD",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 46000,
+      "accommodationCost": 46000,
+      "insuranceCost": null,
+      "visaAndApplicationCost": 3680,
+      "transportCost": 7360,
+      "otherCost": 8280,
+      "totalEstimatedCost": 556000,
+      "totalEstimatedCostCny": 511520,
+      "exchangeRate": 0.92,
+      "exchangeRateDate": null,
+      "exchangeRateNote": "按规划估算汇率 HKD 1≈CNY 0.92；实际缴费以银行结算为准",
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": 400200,
+          "amountOriginal": 435000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "CUHK Graduate School programme page",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "官方页面未单列",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": 3680,
+          "amountOriginal": 4000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "申请与学生签证规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": 7360,
+          "amountOriginal": 8000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": 8280,
+          "amountOriginal": 9000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "教材、通讯及往返交通规划估算",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "学费取自CUHK项目页；其余为规划估算。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027轮次以项目官网公布为准",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "全部申请者",
+          "intake": "2027 Entry",
+          "deadlineType": "日期截止",
+          "officialUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management"
+        }
+      ],
+      "officialUniversityUrl": "https://www.cuhk.edu.hk/",
+      "officialProgramUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+      "officialRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialAcademicRequirementUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+      "officialLanguageRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialWorkExperienceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialDocumentRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/documents-required",
+      "officialDeadlineUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+      "officialFeeUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+      "officialApplicationUrl": "https://apply.bschool.cuhk.edu.hk/",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/chinese-university-hong-kong-cuhk",
+      "dataSource": [
+        "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-management",
+        "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "https://www.gs.cuhk.edu.hk/admissions/how-to-apply"
+      ],
+      "lastUpdated": "2026-09-06",
+      "sourceLastChecked": "2026-09-06",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "项目页确认全日制1年、30 units和HK$435,000学费；截止日期需按2027招生轮次更新。"
+    },
+    {
+      "universityId": "uni-7sder8",
+      "programId": "hk-cuhk-msc-marketing",
+      "universityNameZh": "香港中文大学",
+      "universityNameEn": "The Chinese University of Hong Kong",
+      "universityShortName": "CUHK",
+      "programNameZh": null,
+      "programNameEn": "MSc in Marketing",
+      "programShortName": "MSc Marketing",
+      "subjectArea": "市场营销",
+      "subjectCategory": "Marketing",
+      "country": "中国",
+      "region": "中国香港",
+      "city": "香港沙田",
+      "degreeType": "MSc",
+      "studyMode": "全日制",
+      "durationMonths": 12,
+      "durationLabel": "1年",
+      "durationText": "1年",
+      "intake": "2027 Entry",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027/28",
+      "credits": "36 units",
+      "courseStructure": null,
+      "completionRequirement": "完成至少36 units；具体课程组合以项目官网为准",
+      "qsRank": 18,
+      "qsRankLabel": "18",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+      "academicRequirementOriginal": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+      "academicScale": "official_text",
+      "minimumGpa": null,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": null,
+      "gradeRequirementSourceType": "manual_review",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "商业、经济、传播、数据或相关背景有利",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": null,
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": null,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": null
+      },
+      "backgroundRequirements": {
+        "original": "商业、经济、传播、数据或相关背景有利",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": null,
+        "required": null,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "institutional_reference",
+      "tuitionAmount": 410000,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+      "applicationLinks": {
+        "program": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+        "admission": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "language": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "academic": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+        "tuition": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+        "deadline": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+        "application": "https://apply.bschool.cuhk.edu.hk/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6.5,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic 6.5（Test Centre based/Online）"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 79,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT 79/120（Internet-based/Home Edition）"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.5 · TOEFL iBT 79",
+      "languageRequirementDetails": "项目页指向CUHK Graduate School英语要求；具体豁免及替代考试政策以Graduate School为准。",
+      "languagePolicyFacts": [
+        {
+          "label": "Home Edition",
+          "value": "按Graduate School政策",
+          "tone": "pending"
+        },
+        {
+          "label": "IELTS OSR",
+          "value": "项目页未说明",
+          "tone": "pending"
+        }
+      ],
+      "tuition": 410000,
+      "tuitionCny": 377200,
+      "tuitionCurrency": "HKD",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 46000,
+      "accommodationCost": 46000,
+      "insuranceCost": null,
+      "visaAndApplicationCost": 3680,
+      "transportCost": 7360,
+      "otherCost": 8280,
+      "totalEstimatedCost": 531000,
+      "totalEstimatedCostCny": 488520,
+      "exchangeRate": 0.92,
+      "exchangeRateDate": null,
+      "exchangeRateNote": "按规划估算汇率 HKD 1≈CNY 0.92；实际缴费以银行结算为准",
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": 377200,
+          "amountOriginal": 410000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "CUHK Graduate School programme page",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "官方页面未单列",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": 3680,
+          "amountOriginal": 4000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "申请与学生签证规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": 7360,
+          "amountOriginal": 8000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": 8280,
+          "amountOriginal": 9000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "教材、通讯及往返交通规划估算",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "学费取自CUHK项目页；其余为规划估算。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027轮次以项目官网公布为准",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "全部申请者",
+          "intake": "2027 Entry",
+          "deadlineType": "日期截止",
+          "officialUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing"
+        }
+      ],
+      "officialUniversityUrl": "https://www.cuhk.edu.hk/",
+      "officialProgramUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+      "officialRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialAcademicRequirementUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+      "officialLanguageRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialWorkExperienceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialDocumentRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/documents-required",
+      "officialDeadlineUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+      "officialFeeUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+      "officialApplicationUrl": "https://apply.bschool.cuhk.edu.hk/",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/chinese-university-hong-kong-cuhk",
+      "dataSource": [
+        "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-marketing",
+        "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "https://www.gs.cuhk.edu.hk/admissions/how-to-apply"
+      ],
+      "lastUpdated": "2026-09-06",
+      "sourceLastChecked": "2026-09-06",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "项目页确认全日制1年、36 units和HK$410,000学费；截止日期需按2027招生轮次更新。"
+    },
+    {
+      "universityId": "uni-7sder8",
+      "programId": "hk-cuhk-msc-sustainable-global-business",
+      "universityNameZh": "香港中文大学",
+      "universityNameEn": "The Chinese University of Hong Kong",
+      "universityShortName": "CUHK",
+      "programNameZh": null,
+      "programNameEn": "MSc in Sustainable Global Business",
+      "programShortName": "MSc Sustainable Global Business",
+      "subjectArea": "可持续商业",
+      "subjectCategory": "Management",
+      "country": "中国",
+      "region": "中国香港",
+      "city": "香港沙田",
+      "degreeType": "MSc",
+      "studyMode": "全日制",
+      "durationMonths": 12,
+      "durationLabel": "1年",
+      "durationText": "1年",
+      "intake": "2027 Entry",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027/28",
+      "credits": "30 units",
+      "courseStructure": null,
+      "completionRequirement": "完成至少30 units；capstone study trip等安排以项目官网为准",
+      "qsRank": 18,
+      "qsRankLabel": "18",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+      "academicRequirementOriginal": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+      "academicScale": "official_text",
+      "minimumGpa": null,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": null,
+      "gradeRequirementSourceType": "manual_review",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "商业、经济、环境、社会科学或相关背景均可按项目审核",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "优先考虑具备3年post-qualification full-time work experience者",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "认可大学学士学位；具体要求参照CUHK Graduate School general requirements",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": null,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": null
+      },
+      "backgroundRequirements": {
+        "original": "商业、经济、环境、社会科学或相关背景均可按项目审核",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "优先考虑具备3年post-qualification full-time work experience者",
+        "required": true,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "institutional_reference",
+      "tuitionAmount": 380000,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+      "applicationLinks": {
+        "program": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+        "admission": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "language": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "academic": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+        "tuition": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+        "deadline": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+        "application": "https://apply.bschool.cuhk.edu.hk/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6.5,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic 6.5（Test Centre based/Online）"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 79,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT 79/120（Internet-based/Home Edition）"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.5 · TOEFL iBT 79",
+      "languageRequirementDetails": "项目页指向CUHK Graduate School英语要求；具体豁免及替代考试政策以Graduate School为准。",
+      "languagePolicyFacts": [
+        {
+          "label": "Home Edition",
+          "value": "按Graduate School政策",
+          "tone": "pending"
+        },
+        {
+          "label": "IELTS OSR",
+          "value": "项目页未说明",
+          "tone": "pending"
+        },
+        {
+          "label": "工作经验",
+          "value": "3年优先",
+          "tone": "good"
+        }
+      ],
+      "tuition": 380000,
+      "tuitionCny": 349600,
+      "tuitionCurrency": "HKD",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 46000,
+      "accommodationCost": 46000,
+      "insuranceCost": null,
+      "visaAndApplicationCost": 3680,
+      "transportCost": 7360,
+      "otherCost": 8280,
+      "totalEstimatedCost": 501000,
+      "totalEstimatedCostCny": 460920,
+      "exchangeRate": 0.92,
+      "exchangeRateDate": null,
+      "exchangeRateNote": "按规划估算汇率 HKD 1≈CNY 0.92；实际缴费以银行结算为准",
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": 349600,
+          "amountOriginal": 380000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "CUHK Graduate School programme page",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": 46000,
+          "amountOriginal": 50000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "官方页面未单列",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": 3680,
+          "amountOriginal": 4000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "申请与学生签证规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": 7360,
+          "amountOriginal": 8000,
+          "currency": "HKD",
+          "period": "12个月",
+          "source": "香港生活成本规划估算",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": 8280,
+          "amountOriginal": 9000,
+          "currency": "HKD",
+          "period": "完整学制",
+          "source": "教材、通讯及往返交通规划估算",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "学费取自CUHK项目页；其余为规划估算。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027轮次以项目官网公布为准",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "全部申请者",
+          "intake": "2027 Entry",
+          "deadlineType": "日期截止",
+          "officialUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business"
+        }
+      ],
+      "officialUniversityUrl": "https://www.cuhk.edu.hk/",
+      "officialProgramUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+      "officialRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialAcademicRequirementUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+      "officialLanguageRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialWorkExperienceUrl": "https://www.gs.cuhk.edu.hk/admissions/requirements",
+      "officialDocumentRequirementUrl": "https://www.gs.cuhk.edu.hk/admissions/documents-required",
+      "officialDeadlineUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+      "officialFeeUrl": "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+      "officialApplicationUrl": "https://apply.bschool.cuhk.edu.hk/",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/chinese-university-hong-kong-cuhk",
+      "dataSource": [
+        "https://www.gs.cuhk.edu.hk/programmes/business-administration/msc-sustainable-global-business",
+        "https://www.gs.cuhk.edu.hk/admissions/requirements",
+        "https://www.gs.cuhk.edu.hk/admissions/how-to-apply"
+      ],
+      "lastUpdated": "2026-09-06",
+      "sourceLastChecked": "2026-09-06",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "项目页确认全日制1年、30 units、HK$380,000学费及3年工作经验优先；截止日期需按2027招生轮次更新。"
     }
   ]
 }

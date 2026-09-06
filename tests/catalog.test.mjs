@@ -27,6 +27,10 @@ test("normalizes every legacy program into a unique extensible record", () => {
     assert.ok(program.sourceLastChecked);
     assert.doesNotMatch(program.durationLabel ?? "", /排除/);
   }
+  const cuhkPrograms = catalog.programs.filter((program) => program.universityId === "uni-7sder8");
+  assert.ok(cuhkPrograms.length >= 6);
+  assert.ok(cuhkPrograms.some((program) => program.programNameEn.includes("Business Analytics")));
+  assert.ok(cuhkPrograms.every((program) => program.officialApplicationUrl?.includes("cuhk.edu.hk")));
 });
 
 test("does not preserve personal scoring fields and only emits official application links", () => {
