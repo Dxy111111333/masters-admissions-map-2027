@@ -49,15 +49,16 @@ export default async function ProgramPage({ params, searchParams }: ProgramPageP
         <section className="program-hero">
           <div className="program-hero-main">
             <div className="detail-status"><span>{program.subjectArea ?? "硕士项目"}</span></div>
-            <h1>{program.universityNameZh}</h1>
-            <p className="detail-program-name">{program.programNameEn}</p>
+            <p className="detail-university-link"><a href={`/university/${encodeURIComponent(program.universityId)}/`}>{program.universityNameZh}</a></p>
+            <h1>{program.programNameEn}</h1>
+            <p className="detail-program-name">{program.programNameZh ?? program.programShortName ?? "Program-specific admissions profile"}</p>
             <p>{[program.city, program.region].filter(Boolean).join(" · ")}</p>
           </div>
           <aside className="qs-ticket"><span>QS WORLD UNIVERSITY RANKINGS</span><strong>{program.qsRankLabel ?? "—"}</strong><small>{program.qsRank === null ? "未独立列名" : `${program.qsYear} 世界大学排名`}</small></aside>
         </section>
 
         <section className="study-structure" aria-label="学制与毕业要求">
-          <div><span>学制</span><h2>{program.durationLabel ?? "官网未注明"}</h2><p>{program.durationMonths ? `${program.durationMonths} 个月 · ` : ""}{program.studyMode ?? "学习模式以官网为准"}</p></div>
+          <div><span>学制</span><h2>{program.durationText ?? program.durationLabel ?? "官网未注明"}</h2><p>{program.durationMonths ? `${program.durationMonths} 个月 · ` : ""}{program.studyMode ?? "学习模式以官网为准"}</p></div>
           <div><span>学分</span><h2>{program.credits ?? "官网未注明"}</h2><p>{program.courseStructure ?? "课程结构请查看专业官网"}</p></div>
           <div><span>毕业要求</span><h2>{program.completionRequirement ? "按培养方案完成" : "官网未注明"}</h2><p>{program.completionRequirement ?? "请在专业官网或培养方案中进一步核对"}</p></div>
         </section>
@@ -65,7 +66,7 @@ export default async function ProgramPage({ params, searchParams }: ProgramPageP
         <section className="core-facts" aria-label="项目核心信息">
           <div><span>学位类型</span><strong>{program.degreeType ?? "待核实"}</strong><small>{program.studyMode ?? "学习模式待核实"}</small></div>
           <div><span>标准学制</span><strong>{program.durationLabel ?? "待核实"}</strong><small>{program.durationMonths ? `${program.durationMonths} 个月` : "月份待核实"}</small></div>
-          <div><span>QS 排名</span><strong>{formatQs(program.qsRank, program.qsRankLabel)}</strong><small>{program.qsYear} QS WUR</small></div>
+          <div><span>QS 院校排名</span><strong>{formatQs(program.qsRank, program.qsRankLabel)}</strong><small>{program.qsRank ? `${program.qsYear} QS WUR · University level` : "项目不单独排名"}</small></div>
           <div className="fact-budget"><span>预计总预算</span><strong>{formatCny(program.totalEstimatedCostCny, true)}</strong><small>{formatOriginal(program.totalEstimatedCost, program.tuitionCurrency)}</small></div>
         </section>
 
@@ -74,6 +75,8 @@ export default async function ProgramPage({ params, searchParams }: ProgramPageP
           <a href="#budget-detail"><span>02</span><strong>预算明细</strong><small>完整学制费用构成</small></a>
           <a href="#official-links"><span>03</span><strong>官方入口</strong><small>项目、申请与证据链接</small></a>
         </nav>
+
+        <section className="program-data-note" aria-label="专业级数据说明"><strong>这是专业级申请画像</strong><span>本页的学术、语言、背景、费用、截止日期和申请入口均只对应当前项目；QS、国家和城市属于院校层信息。</span><small>招生周期：{program.admissionCycle ?? "待核实"} · 最近核查：{program.sourceLastChecked}</small></section>
 
         <div className="detail-layout">
           <RequirementPanels program={program}/>

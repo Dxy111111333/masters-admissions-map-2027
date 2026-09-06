@@ -3,6 +3,7 @@ export type LanguageTest = (typeof LANGUAGE_TESTS)[number];
 export type GradeScale = "percentage" | "gpa4" | "gpa5" | "uk_honours";
 export type SortOption = "match" | "qs" | "budget" | "duration";
 export type VerificationStatus = "verified" | "needs_review";
+export type RequirementScope = "program" | "institutional_reference" | "manual_review";
 
 export interface LanguageRequirement {
   test: LanguageTest;
@@ -24,6 +25,78 @@ export interface ApplicationDeadline {
   intake: string | null;
   deadlineType: string;
   officialUrl: string | null;
+}
+
+export interface AcademicRequirements {
+  original: string | null;
+  scale: string | null;
+  minimumGrade: number | null;
+  minimumGpa: number | null;
+  minimumPercentage: number | null;
+  qualificationLevel: string | null;
+  normalizedScore: number | null;
+}
+
+export interface BackgroundRequirements {
+  original: string | null;
+  prerequisiteCourses: string | null;
+  mathematicsRequirement: string | null;
+}
+
+export interface WorkExperienceRequirements {
+  original: string | null;
+  required: boolean | null;
+  minimumYears: number | null;
+  fields: string | null;
+  mbaOnly: boolean;
+}
+
+export interface GreGmatRequirements {
+  required: boolean | null;
+  recommended: boolean | null;
+  greMinimum: number | null;
+  gmatMinimum: number | null;
+  waiver: string | null;
+}
+
+export interface DocumentRequirements {
+  personalStatement: string | null;
+  statementOfPurpose: string | null;
+  cv: string | null;
+  references: string | null;
+  transcript: string | null;
+  degreeCertificate: string | null;
+  writingSample: string | null;
+  portfolio: string | null;
+  researchProposal: string | null;
+}
+
+export interface ProgramApplicationLinks {
+  program: string | null;
+  admission: string | null;
+  language: string | null;
+  academic: string | null;
+  tuition: string | null;
+  deadline: string | null;
+  application: string | null;
+}
+
+export interface University {
+  id: string;
+  nameZh: string;
+  nameEn: string | null;
+  shortName: string | null;
+  country: string;
+  region: string;
+  city: string | null;
+  universityType: string | null;
+  qsRank: number | null;
+  qsRankLabel: string | null;
+  qsYear: number | null;
+  universityUrl: string | null;
+  qsUrl: string | null;
+  latitude: number | null;
+  longitude: number | null;
 }
 
 export interface LanguagePolicyFact {
@@ -53,6 +126,7 @@ export interface Program {
   programNameEn: string;
   programShortName: string | null;
   subjectArea: string | null;
+  subjectCategory: string | null;
   country: string;
   region: string;
   city: string | null;
@@ -60,7 +134,11 @@ export interface Program {
   studyMode: string | null;
   durationMonths: number | null;
   durationLabel: string | null;
+  durationText: string | null;
   intake: string | null;
+  intakeMonth: string | null;
+  academicYear: string | null;
+  admissionCycle: string | null;
   credits: string | null;
   courseStructure: string | null;
   completionRequirement: string | null;
@@ -69,8 +147,12 @@ export interface Program {
   qsYear: number;
   qsIndependent: boolean;
   academicRequirement: string | null;
+  academicRequirementOriginal: string | null;
   academicScale: string;
   minimumGpa: number | null;
+  minimumGrade: number | null;
+  minimumPercentage: number | null;
+  qualificationLevel: string | null;
   minimumAcademicScoreNormalized: number | null;
   gradeRequirementSourceType: "official" | "national_guidance" | "general_reference" | "manual_review";
   gradeRequirementSourceLabel: string | null;
@@ -78,11 +160,23 @@ export interface Program {
   equivalentGradeRequirements: Partial<Record<GradeScale, string>>;
   backgroundRequirement: string | null;
   prerequisiteCourses: string | null;
+  mathematicsRequirement: string | null;
   workExperienceRequirement: string | null;
   applicationMaterials: string | null;
   recommendationRequirement: string | null;
   personalStatementRequirement: string | null;
   portfolioRequirement: string | null;
+  academicRequirements: AcademicRequirements;
+  backgroundRequirements: BackgroundRequirements;
+  workExperienceRequirements: WorkExperienceRequirements;
+  greGmatRequirements: GreGmatRequirements;
+  documentRequirements: DocumentRequirements;
+  admissionRequirementScope: RequirementScope;
+  languageRequirementScope: RequirementScope;
+  tuitionAmount: number | null;
+  tuitionAcademicYear: string | null;
+  tuitionUrl: string | null;
+  applicationLinks: ProgramApplicationLinks;
   languageRequirements: LanguageRequirement[];
   languageRequirementRaw: string | null;
   languageRequirementDetails: string | null;
@@ -121,6 +215,7 @@ export interface Program {
   qsUrl: string | null;
   dataSource: string[];
   lastUpdated: string;
+  sourceLastChecked: string;
   verificationStatus: VerificationStatus;
   verificationNotes: string | null;
 }

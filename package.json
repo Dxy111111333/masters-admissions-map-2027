@@ -14,7 +14,7 @@
     "preview:static": "node scripts/serve-static.mjs",
     "start": "vinext start",
     "test": "pnpm build:static && node --test tests/*.test.mjs",
-    "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
+    "lint": "eslint app components lib scripts tests --ignore-pattern dist --ignore-pattern .next --ignore-pattern out --ignore-pattern artifacts",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

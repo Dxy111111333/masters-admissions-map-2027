@@ -1,10 +1,14 @@
 import catalogJson from "@/data/programs.json";
-import type { Program, ProgramCatalog } from "@/lib/types";
+import universitiesJson from "@/data/universities.json";
+import type { Program, ProgramCatalog, University } from "@/lib/types";
 
 const catalog = catalogJson as ProgramCatalog;
+const universityCatalog = universitiesJson as { schemaVersion: number; lastMigratedAt: string; universities: University[] };
 
 export const programs: Program[] = catalog.programs;
 export const catalogLastUpdated = catalog.lastMigratedAt;
+export const universities: University[] = universityCatalog.universities;
+export const universityCatalogLastUpdated = universityCatalog.lastMigratedAt;
 
 export const regionPresentation: Record<string, { code: string; nameEn: string; note: string; accent: string; latitude: number; longitude: number }> = {
   中国香港: { code: "HK", nameEn: "Hong Kong", note: "高密度一年制与国际排名选择", accent: "sea", latitude: 22.3193, longitude: 114.1694 },
@@ -29,4 +33,16 @@ export function getRegions() {
 
 export function getProgram(programId: string) {
   return programs.find((program) => program.programId === programId) ?? null;
+}
+
+export function getUniversity(universityId: string) {
+  return universities.find((university) => university.id === universityId) ?? null;
+}
+
+export function getProgramsForUniversity(universityId: string) {
+  return programs.filter((program) => program.universityId === universityId);
+}
+
+export function getUniversityProgramCount(universityId: string) {
+  return getProgramsForUniversity(universityId).length;
 }

@@ -4,6 +4,7 @@ import test from "node:test";
 
 const root = new URL("../out/", import.meta.url);
 const catalog = JSON.parse(await readFile(new URL("../data/programs.json", import.meta.url), "utf8"));
+const universities = JSON.parse(await readFile(new URL("../data/universities.json", import.meta.url), "utf8"));
 
 test("exports the generic interactive admissions homepage", async () => {
   const html = await readFile(new URL("index.html", root), "utf8");
@@ -23,5 +24,14 @@ test("exports a real detail page for every program", async () => {
     assert.match(html, /项目详情导航/);
     assert.doesNotMatch(html, /申请入口待核实|数据可信度|部分信息待核实/);
     assert.doesNotMatch(html, /陈昕洋|CXY88888888/);
+  }
+});
+
+test("exports a university directory page for every normalized university", async () => {
+  for (const university of universities.universities) {
+    const html = await readFile(new URL(`university/${university.id}/index.html`, root), "utf8");
+    assert.match(html, new RegExp(university.nameZh));
+    assert.match(html, /选择你感兴趣的专业/);
+    assert.match(html, /PROGRAM CATALOG/);
   }
 });

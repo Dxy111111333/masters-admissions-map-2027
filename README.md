@@ -1,6 +1,6 @@
 # 留学罗盘 · Study Compass
 
-面向不同背景申请者的通用硕士项目筛选平台。项目基于原有 28 个硕士项目和官网证据完成迁移，但不再包含个人画像、固定 40 万预算、个人匹配分或固定 QS 前 200 条件。
+面向不同背景申请者的通用硕士项目筛选平台。当前目录包含 41 所院校、44 个经济学与商科相关硕士项目；录取要求、语言、学费、学制和截止日期均按专业记录，QS、城市和院校官网属于院校层信息。
 
 ## 主要能力
 
@@ -11,7 +11,8 @@
 - 完整学制预算与 QS 各使用一条双端范围滑杆；
 - URL 查询参数保存条件，可直接复制分享；
 - 一行一个项目的纵向结果列表；
-- 28 个独立项目详情页；
+- 院校目录页（`/university/{universityId}`）与专业详情页（`/program/{programId}`）两级导航；
+- 44 个独立项目详情页，结果以 University + Program 为最小推荐单位；
 - 结构化语言细则、来源相邻展示、申请轮次、预算环形图和官方申请入口；
 - 桌面、平板和手机响应式布局，支持键盘、焦点样式和减少动态效果。
 
@@ -21,6 +22,7 @@
 app/
   page.tsx                         通用筛选首页
   program/[programId]/page.tsx    独立项目详情页
+  university/[universityId]/page.tsx 院校层信息与专业选择页
 components/
   AdmissionsExplorer.tsx          筛选状态与 URL 同步
   FilterPanel.tsx                 成绩、语言、预算、QS 筛选器
@@ -33,7 +35,9 @@ components/
   BudgetBreakdown.tsx             完整学制预算明细
   BudgetDonut.tsx                 可交互预算环形图
   BackToResults.tsx               保留筛选状态的返回入口
-data/programs.json                统一的 28 项目数据
+  UniversityPrograms.tsx          院校专业搜索与分类选择
+data/programs.json                专业级目录数据（schemaVersion 3）
+data/universities.json            院校层稳定信息与QS目录
 lib/types.ts                      TypeScript 数据模型
 lib/matching.ts                   独立、可测试的匹配与排序逻辑
 lib/filter-state.ts               默认条件与 URL 参数序列化
@@ -60,7 +64,7 @@ pnpm dev
 pnpm build:static
 ```
 
-输出目录为 `out/`，包含首页和 28 个详情页。
+输出目录为 `out/`，包含首页、44 个专业详情页和 41 个院校页。
 
 本机预览静态网站：
 

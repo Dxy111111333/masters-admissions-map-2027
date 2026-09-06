@@ -42,6 +42,7 @@ function academicSignal(program: Program, filters: FilterState): MatchSignal {
 
 function languageSignal(program: Program, filters: FilterState): MatchSignal {
   if (filters.noLanguageScore) return { state: "borderline", label: "需补语言", detail: "暂未取得语言成绩，项目仍保留供规划" };
+  if (program.languageRequirementScope !== "program") return { state: "unknown", label: "专业语言要求待确认", detail: "当前字段来自院校/研究生院参考或人工复核，不能直接套用到该专业" };
   const requirement = program.languageRequirements.find((item) => item.test === filters.languageTest);
   if (!requirement) return { state: "unknown", label: "该考试需查官网", detail: `现有官网数据未结构化 ${filters.languageTest} 要求` };
 

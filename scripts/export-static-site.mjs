@@ -6,6 +6,7 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 const clientDir = path.join(projectRoot, "dist", "client");
 const outputDir = path.join(projectRoot, "out");
 const catalog = JSON.parse(await readFile(path.join(projectRoot, "data", "programs.json"), "utf8"));
+const universities = JSON.parse(await readFile(path.join(projectRoot, "data", "universities.json"), "utf8"));
 
 if (path.dirname(outputDir) !== projectRoot || path.basename(outputDir) !== "out") {
   throw new Error("Refusing to clean an unexpected output directory");
@@ -50,4 +51,11 @@ for (const program of catalog.programs) {
   await writeFile(path.join(directory, "index.html"), html, "utf8");
 }
 
-console.log(`Exported homepage and ${catalog.programs.length} program detail pages`);
+for (const university of universities.universities) {
+  const directory = path.join(outputDir, "university", university.id);
+  await mkdir(directory, { recursive: true });
+  const html = await render(`/university/${encodeURIComponent(university.id)}`);
+  await writeFile(path.join(directory, "index.html"), html, "utf8");
+}
+
+console.log(`Exported homepage, ${catalog.programs.length} program detail pages and ${universities.universities.length} university pages`);

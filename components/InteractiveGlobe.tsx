@@ -71,6 +71,21 @@ const campusCoordinates: Record<string, [number, number]> = {
   奥克兰大学: [174.7691, -36.8523],
   "香港中文大学（深圳）": [114.2076, 22.6895],
   "香港城市大学（东莞）": [113.874, 22.8961],
+  新加坡国立大学: [103.7764, 1.2966],
+  南洋理工大学: [103.6831, 1.3483],
+  新加坡管理大学: [103.8499, 1.2966],
+  新加坡社科大学: [103.849, 1.334],
+  詹姆斯库克大学新加坡校区: [103.85, 1.326],
+  马来亚大学: [101.662, 3.1201],
+  马来西亚博特拉大学: [101.704, 3.012],
+  马来西亚国民大学: [101.78, 2.922],
+  马来西亚理科大学: [100.305, 5.356],
+  马来西亚理工大学: [103.736, 1.559],
+  泰莱大学: [101.616, 3.065],
+  朱拉隆功大学: [100.533, 13.738],
+  法政大学: [100.493, 13.756],
+  玛希隆大学: [100.325, 13.794],
+  玛希隆大学国际学院: [100.325, 13.794],
 };
 
 const regionViews: Record<string, { center: [number, number]; zoom: number }> = {
@@ -79,6 +94,9 @@ const regionViews: Record<string, { center: [number, number]; zoom: number }> = 
   英国: { center: [-2.4, 54.2], zoom: 5.25 },
   新西兰: { center: [174.1, -40.8], zoom: 4.8 },
   湾区校区: { center: [114.05, 22.78], zoom: 8.2 },
+  新加坡: { center: [103.82, 1.34], zoom: 10.2 },
+  马来西亚: { center: [101.7, 3.2], zoom: 6.3 },
+  泰国: { center: [100.6, 13.7], zoom: 6.1 },
 };
 
 function createTextElement(tag: "span" | "strong" | "small" | "p", className: string, text: string) {
@@ -99,8 +117,10 @@ export function InteractiveGlobe({ regions, selected, onToggle }: { regions: Glo
   const [mode, setMode] = useState<"globe" | "map">("globe");
   const [zoom, setZoom] = useState(1.25);
 
-  onToggleRef.current = onToggle;
-  selectedRef.current = selected;
+  useEffect(() => {
+    onToggleRef.current = onToggle;
+    selectedRef.current = selected;
+  }, [onToggle, selected]);
 
   const schools = useMemo(() => {
     const grouped = new Map<string, { university: string; universityEn: string | null; region: string; city: string | null; count: number }>();

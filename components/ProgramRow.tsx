@@ -8,13 +8,13 @@ function SignalPill({ signal }: { signal: MatchSignal }) {
 
 export function ProgramRow({ match, filterQuery }: { match: ProgramMatch; filterQuery: string }) {
   const { program } = match;
-  const routeCodes: Record<string, string> = { 中国香港: "HKG", 中国澳门: "MFM", 英国: "UK", 新西兰: "NZ", 湾区校区: "GBA" };
+  const routeCodes: Record<string, string> = { 中国香港: "HKG", 中国澳门: "MFM", 英国: "UK", 新西兰: "NZ", 湾区校区: "GBA", 新加坡: "SG", 马来西亚: "MY", 泰国: "TH" };
   return (
     <article className="program-row">
       <span className="program-route-code" aria-hidden="true">{routeCodes[program.region] ?? "INTL"}</span>
       <div className="program-primary">
-        <div className="row-kicker"><span className={`match-label match-${match.category}`}>{match.category}</span><span>{program.subjectArea ?? program.degreeType ?? "硕士项目"}</span></div>
-        <h3>{program.universityNameZh}</h3>
+        <div className="row-kicker"><span className={`match-label match-${match.category}`}>{match.category}</span><span>{program.subjectCategory ?? program.subjectArea ?? program.degreeType ?? "硕士项目"}</span></div>
+        <h3><a className="program-university-link" href={`/university/${encodeURIComponent(program.universityId)}/`}>{program.universityNameZh}</a></h3>
         <p className="program-name">{program.programNameEn}</p>
         <p className="program-place">{[program.region, program.city].filter(Boolean).join(" · ")}</p>
       </div>

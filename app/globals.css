@@ -253,6 +253,66 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
   *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
 
+/* University → program directory: stable institution facts first, requirements only after selection. */
+.university-page { padding-block: 34px 120px; }
+.university-hero { display: grid; grid-template-columns: minmax(0,1fr) 280px; gap: 42px; align-items: center; padding: clamp(34px,5vw,64px); border: 1px solid rgba(16,47,56,.12); border-radius: 30px; background: linear-gradient(135deg,#e3efeb 0%,#f7f4e9 58%,#f4dfd3 100%); box-shadow: var(--shadow); overflow: hidden; }
+.university-hero h1 { margin: 17px 0 7px; font: 900 clamp(42px,6vw,78px)/1.03 "Noto Serif CJK SC","Songti SC",serif; letter-spacing: -.055em; }
+.university-name-en { margin: 0; color: var(--sea-dark); font: 800 clamp(18px,2.2vw,28px)/1.25 "Iowan Old Style","Noto Serif CJK SC",serif; }
+.university-location { margin: 14px 0 0; color: var(--ink-soft); font-size: 12px; }
+.university-rank-card { min-height: 220px; display: flex; flex-direction: column; justify-content: center; padding: 24px; border: 1px solid rgba(16,47,56,.17); border-radius: 22px; background: rgba(255,255,255,.7); transform: rotate(1.5deg); }
+.university-rank-card span { font-size: 8px; font-weight: 900; letter-spacing: .16em; }
+.university-rank-card strong { margin: 12px 0 7px; color: var(--sea); font: 900 clamp(42px,5vw,66px)/1 "Iowan Old Style",serif; overflow-wrap: anywhere; }
+.university-rank-card small { color: var(--ink-soft); font-size: 10px; line-height: 1.5; }
+.university-stable-facts { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 18px 0 74px; }
+.university-stable-facts > div { min-height: 104px; padding: 20px; border: 1px solid var(--line); border-radius: 18px; background: rgba(255,255,255,.72); }
+.university-stable-facts span,.university-stable-facts small { display:block; color: var(--ink-soft); font-size: 9px; }
+.university-stable-facts strong { display:block; margin-top: 11px; font-size: 17px; }
+.university-stable-facts a { display:inline-flex; align-items:center; gap:6px; margin-top: 11px; color: var(--sea); font-size: 12px; font-weight: 850; text-decoration:none; }
+.university-stable-facts a svg { width: 13px; }
+.university-programs-heading { display:flex; justify-content:space-between; gap:20px; align-items:end; margin-bottom: 22px; }
+.university-programs-heading > div > span { color: var(--coral); font-size: 9px; font-weight: 900; letter-spacing: .18em; }
+.university-programs-heading h2 { margin: 8px 0 5px; font-size: clamp(30px,4vw,48px); letter-spacing:-.045em; }
+.university-programs-heading p { margin:0; color: var(--ink-soft); font-size: 12px; }
+.university-programs-heading > strong { color: var(--sea); font: 900 31px "Iowan Old Style",serif; white-space: nowrap; }
+.program-directory-tools { display:grid; gap: 14px; margin-bottom: 18px; }
+.program-directory-tools input { width:100%; min-height: 47px; padding: 0 15px; border:1px solid var(--line); border-radius: 13px; color:var(--ink); background: rgba(255,255,255,.8); font-size: 13px; }
+.program-category-tabs { display:flex; gap:7px; flex-wrap:wrap; }
+.program-category-tabs button { padding: 8px 12px; border:1px solid var(--line); border-radius: 999px; color:var(--ink-soft); background:rgba(255,255,255,.72); font-size: 10px; font-weight: 850; cursor:pointer; transition:.2s ease; }
+.program-category-tabs button:hover,.program-category-tabs button[aria-selected="true"] { border-color:var(--sea); color:var(--sea-dark); background:var(--sea-soft); }
+.university-program-grid { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; }
+.university-program-card { display:flex; flex-direction:column; min-height: 204px; padding: 21px 22px 18px; border:1px solid rgba(16,47,56,.12); border-radius: 20px; background: rgba(255,255,255,.78); box-shadow:0 6px 0 rgba(16,47,56,.025); transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+.university-program-card:hover { transform: translateY(-3px); border-color: rgba(17,123,119,.3); box-shadow: 0 18px 38px rgba(22,53,58,.1); }
+.program-card-top { display:flex; justify-content:space-between; gap:8px; color:var(--ink-soft); font-size:9px; font-weight:850; }
+.program-card-top span:first-child { color:var(--sea); }
+.university-program-card h3 { margin: 19px 0 3px; font: 900 clamp(20px,2.1vw,28px)/1.17 "Iowan Old Style","Noto Serif CJK SC",serif; letter-spacing:-.02em; }
+.program-card-zh { margin:0; color:var(--ink-soft); font-size:11px; }
+.program-card-meta { min-height: 34px; margin: 14px 0 19px; color:var(--ink-soft); font-size:10px; line-height:1.55; }
+.program-card-bottom { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:auto; padding-top:13px; border-top:1px solid var(--line); }
+.program-card-bottom strong { color:var(--sea-dark); font: 900 16px "Iowan Old Style",serif; }
+.program-card-bottom a { display:inline-flex; align-items:center; gap:5px; color:var(--sea); font-size:10px; font-weight:850; text-decoration:none; }
+.program-card-bottom a svg { width:13px; transition: transform .2s; }
+.program-card-bottom a:hover svg { transform:translateX(3px); }
+.program-primary h3 a { color:inherit; text-decoration:none; }
+.program-primary h3 a:hover { color:var(--sea); }
+.program-university-link { color:inherit; text-decoration:none; }
+.detail-university-link { margin: 0; font-size: 13px; font-weight: 850; }
+.detail-university-link a { color: var(--sea-dark); text-decoration: none; }
+.detail-university-link a:hover { text-decoration: underline; }
+.program-data-note { display: grid; gap: 5px; margin: -40px 0 52px; padding: 16px 19px; border-left: 3px solid var(--sea); border-radius: 0 13px 13px 0; background: color-mix(in srgb,var(--sea-soft) 62%,white); }
+.program-data-note strong { font-size: 13px; }
+.program-data-note span,.program-data-note small { color: var(--ink-soft); font-size: 11px; line-height: 1.6; }
+.scope-warning { padding: 12px 14px; border-radius: 10px; color: #8d5d16; background: var(--gold-soft); font-size: 12px !important; }
+@media (max-width: 760px) {
+  .university-page { padding-block: 24px 80px; }
+  .university-hero { grid-template-columns:1fr; gap:26px; padding: 29px 22px; border-radius:23px; }
+  .university-hero h1 { font-size: 43px; }
+  .university-rank-card { min-height: 150px; transform:none; }
+  .university-stable-facts { grid-template-columns:1fr; margin-bottom: 52px; }
+  .university-programs-heading { align-items:start; flex-direction:column; }
+  .university-programs-heading > strong { font-size:25px; }
+  .university-program-grid { grid-template-columns:1fr; }
+}
+
 /* 2027 editorial travel system — desktop-first refinement */
 :root {
   --ink: #102f38;

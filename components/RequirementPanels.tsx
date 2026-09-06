@@ -9,10 +9,11 @@ function SourceLink({ url, label }: { url: string | null; label: string }) {
 
 export function RequirementPanels({ program }: { program: Program }) {
   const requirements: RequirementEntry[] = [
-    { title: "学术成绩要求", value: program.academicRequirement, url: program.officialAcademicRequirementUrl, sourceLabel: "查看学术要求官网" },
+    { title: "学术成绩要求（官网原文）", value: program.academicRequirementOriginal ?? program.academicRequirement, url: program.officialAcademicRequirementUrl, sourceLabel: "查看学术要求官网" },
     { title: "本科专业背景要求", value: program.backgroundRequirement === program.academicRequirement ? null : program.backgroundRequirement, url: program.officialAcademicRequirementUrl, sourceLabel: "查看专业背景官网" },
-    { title: "先修课程要求", value: program.prerequisiteCourses, url: program.officialAcademicRequirementUrl, sourceLabel: "查看先修课程官网" },
+    { title: "数学 / 先修课程要求", value: program.mathematicsRequirement ?? program.prerequisiteCourses, url: program.officialAcademicRequirementUrl, sourceLabel: "查看先修课程官网" },
     { title: "工作或实习经历要求", value: program.workExperienceRequirement, url: program.officialWorkExperienceUrl, sourceLabel: "查看经历要求官网" },
+    { title: "GRE / GMAT", value: program.greGmatRequirements.required === true ? `要求提交${program.greGmatRequirements.greMinimum ? ` GRE 最低 ${program.greGmatRequirements.greMinimum}` : ""}${program.greGmatRequirements.gmatMinimum ? `；GMAT 最低 ${program.greGmatRequirements.gmatMinimum}` : ""}` : program.greGmatRequirements.recommended === true ? "官网建议提交，具体豁免条件请看项目页面" : null, url: program.officialAcademicRequirementUrl, sourceLabel: "查看标化要求官网" },
     { title: "申请材料", value: program.applicationMaterials, url: program.officialDocumentRequirementUrl, sourceLabel: "查看材料清单官网" },
     { title: "推荐信要求", value: program.recommendationRequirement, url: program.officialDocumentRequirementUrl, sourceLabel: "查看推荐信官网" },
     { title: "个人陈述要求", value: program.personalStatementRequirement, url: program.officialDocumentRequirementUrl, sourceLabel: "查看文书要求官网" },
@@ -26,6 +27,7 @@ export function RequirementPanels({ program }: { program: Program }) {
         <details className="requirement-panel" open>
           <summary><span>语言成绩要求</span><small>{program.languageRequirementRaw ?? "官网未提供可结构化分数"}</small></summary>
           <div className="requirement-body">
+            {program.languageRequirementScope !== "program" && <p className="scope-warning">当前语言字段属于院校/研究生院参考或人工复核范围，不能替代该专业页面的最终要求；递交前请打开专业官方入口。</p>}
             {program.languageRequirements.length > 0 ? <div className="language-requirement-grid">{program.languageRequirements.map((item) => {
               const values = Object.values(item.sectionMinimums ?? {}).filter((value) => value !== null);
               const sectionCopy = values.length && new Set(values).size === 1 ? `各单项不低于 ${values[0]}` : item.sectionMinimum === null ? "单项要求见官网细则" : `各单项不低于 ${item.sectionMinimum}`;

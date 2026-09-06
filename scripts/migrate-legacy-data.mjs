@@ -7,6 +7,7 @@ const sourceDirectory = path.join(projectRoot, "content", "regions");
 const outputDirectory = path.join(projectRoot, "data");
 const outputPath = path.join(outputDirectory, "programs.json");
 const additionalProgramsPath = path.join(projectRoot, "content", "additional-programs.json");
+const curatedExpansionPath = path.join(projectRoot, "content", "program-expansion.json");
 
 const regionMeta = {
   香港: { country: "中国", region: "中国香港", code: "hk", currency: "HKD" },
@@ -179,6 +180,163 @@ function parseDeadlines(value, url, intake) {
   }));
 }
 
+function emptyCostBreakdown(currency = "") {
+  return [
+    ["tuition", "学费"],
+    ["accommodation", "住宿或租房"],
+    ["living", "生活费"],
+    ["insurance", "医疗保险"],
+    ["visa", "签证及申请费用"],
+    ["transport", "当地交通"],
+    ["other", "其他费用"],
+  ].map(([key, label]) => ({ key, label, amountCny: null, amountOriginal: null, currency, period: "完整学制", source: "官方页面尚未给出可结构化金额", type: key === "tuition" ? "fixed" : "estimated" }));
+}
+
+function normalizeCuratedProgram(raw) {
+  const officialProgramUrl = raw.officialProgramUrl ?? null;
+  const officialRequirementUrl = raw.officialRequirementUrl ?? officialProgramUrl;
+  const languageRequirements = Array.isArray(raw.languageRequirements) ? raw.languageRequirements : [];
+  const workExperience = raw.workExperienceRequirement ?? null;
+  const academicOriginal = raw.academicRequirement ?? null;
+  const academicScope = raw.admissionRequirementScope ?? "program";
+  return {
+    universityId: raw.universityId,
+    programId: raw.programId,
+    universityNameZh: raw.universityNameZh,
+    universityNameEn: raw.universityNameEn ?? null,
+    universityShortName: raw.universityShortName ?? null,
+    programNameZh: raw.programNameZh ?? null,
+    programNameEn: raw.programNameEn,
+    programShortName: raw.programShortName ?? null,
+    subjectArea: raw.subjectArea ?? null,
+    subjectCategory: raw.subjectCategory ?? raw.subjectArea ?? null,
+    country: raw.country,
+    region: raw.region,
+    city: raw.city ?? null,
+    degreeType: raw.degreeType ?? null,
+    studyMode: raw.studyMode ?? null,
+    durationMonths: numberOrNull(raw.durationMonths),
+    durationLabel: raw.durationLabel ?? null,
+    durationText: raw.durationText ?? raw.durationLabel ?? null,
+    intake: raw.intake ?? null,
+    intakeMonth: raw.intakeMonth ?? null,
+    academicYear: raw.academicYear ?? "2027 Entry",
+    admissionCycle: raw.admissionCycle ?? "2027 Entry",
+    credits: raw.credits ?? null,
+    courseStructure: raw.courseStructure ?? null,
+    completionRequirement: raw.completionRequirement ?? null,
+    qsRank: numberOrNull(raw.qsRank),
+    qsRankLabel: raw.qsRankLabel ?? null,
+    qsYear: numberOrNull(raw.qsYear) ?? 2027,
+    qsIndependent: raw.qsIndependent !== false,
+    academicRequirement: academicOriginal,
+    academicRequirementOriginal: academicOriginal,
+    academicScale: raw.academicScale ?? "official_text",
+    minimumGpa: numberOrNull(raw.minimumGpa),
+    minimumGrade: numberOrNull(raw.minimumGrade),
+    minimumPercentage: numberOrNull(raw.minimumPercentage),
+    qualificationLevel: raw.qualificationLevel ?? null,
+    minimumAcademicScoreNormalized: numberOrNull(raw.minimumAcademicScoreNormalized),
+    gradeRequirementSourceType: raw.minimumAcademicScoreNormalized === undefined ? "manual_review" : "official",
+    gradeRequirementSourceLabel: raw.gradeRequirementSourceLabel ?? null,
+    gradeRequirementSourceUrl: raw.gradeRequirementSourceUrl ?? officialRequirementUrl,
+    equivalentGradeRequirements: raw.equivalentGradeRequirements ?? {},
+    backgroundRequirement: raw.backgroundRequirement ?? null,
+    prerequisiteCourses: raw.prerequisiteCourses ?? null,
+    mathematicsRequirement: raw.mathematicsRequirement ?? null,
+    workExperienceRequirement: workExperience,
+    applicationMaterials: raw.applicationMaterials ?? null,
+    recommendationRequirement: raw.recommendationRequirement ?? null,
+    personalStatementRequirement: raw.personalStatementRequirement ?? null,
+    portfolioRequirement: raw.portfolioRequirement ?? null,
+    academicRequirements: { original: academicOriginal, scale: raw.academicScale ?? "official_text", minimumGrade: numberOrNull(raw.minimumGrade), minimumGpa: numberOrNull(raw.minimumGpa), minimumPercentage: numberOrNull(raw.minimumPercentage), qualificationLevel: raw.qualificationLevel ?? null, normalizedScore: numberOrNull(raw.minimumAcademicScoreNormalized) },
+    backgroundRequirements: { original: raw.backgroundRequirement ?? null, prerequisiteCourses: raw.prerequisiteCourses ?? null, mathematicsRequirement: raw.mathematicsRequirement ?? null },
+    workExperienceRequirements: { original: workExperience, required: workExperience ? !/无强制|不要求|not required/i.test(workExperience) : null, minimumYears: null, fields: null, mbaOnly: /MBA|EMBA/i.test(raw.programNameEn) },
+    greGmatRequirements: { required: null, recommended: null, greMinimum: null, gmatMinimum: null, waiver: null },
+    documentRequirements: { personalStatement: raw.personalStatementRequirement ?? null, statementOfPurpose: null, cv: null, references: raw.recommendationRequirement ?? null, transcript: null, degreeCertificate: null, writingSample: null, portfolio: raw.portfolioRequirement ?? null, researchProposal: null },
+    admissionRequirementScope: academicScope,
+    languageRequirementScope: raw.languageRequirementScope ?? "manual_review",
+    tuitionAmount: numberOrNull(raw.tuition),
+    tuitionAcademicYear: raw.tuitionAcademicYear ?? "2027 Entry",
+    tuitionUrl: raw.officialFeeUrl ?? officialProgramUrl,
+    applicationLinks: { program: officialProgramUrl, admission: officialRequirementUrl, language: raw.officialLanguageRequirementUrl ?? officialRequirementUrl, academic: raw.officialAcademicRequirementUrl ?? officialRequirementUrl, tuition: raw.officialFeeUrl ?? officialProgramUrl, deadline: raw.officialDeadlineUrl ?? officialRequirementUrl, application: raw.officialApplicationUrl ?? null },
+    languageRequirements,
+    languageRequirementRaw: raw.languageRequirementRaw ?? null,
+    languageRequirementDetails: raw.languageRequirementDetails ?? null,
+    languagePolicyFacts: raw.languagePolicyFacts ?? [],
+    tuition: numberOrNull(raw.tuition),
+    tuitionCny: numberOrNull(raw.tuitionCny),
+    tuitionCurrency: raw.tuitionCurrency ?? "",
+    tuitionPeriod: raw.tuitionPeriod ?? "完整学制",
+    livingCost: numberOrNull(raw.livingCost),
+    accommodationCost: numberOrNull(raw.accommodationCost),
+    insuranceCost: numberOrNull(raw.insuranceCost),
+    visaAndApplicationCost: numberOrNull(raw.visaAndApplicationCost),
+    transportCost: numberOrNull(raw.transportCost),
+    otherCost: numberOrNull(raw.otherCost),
+    totalEstimatedCost: numberOrNull(raw.totalEstimatedCost),
+    totalEstimatedCostCny: numberOrNull(raw.totalEstimatedCostCny),
+    exchangeRate: numberOrNull(raw.exchangeRate),
+    exchangeRateDate: raw.exchangeRateDate ?? null,
+    exchangeRateNote: raw.exchangeRateNote ?? null,
+    costBreakdown: raw.costBreakdown ?? emptyCostBreakdown(raw.tuitionCurrency ?? ""),
+    costNotes: raw.costNotes ?? "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+    scholarshipStatus: raw.scholarshipStatus ?? null,
+    applicationDeadline: raw.applicationDeadline ?? "2027日期尚未公布",
+    applicationDeadlines: raw.applicationDeadlines ?? [{ roundName: "主要申请截止", deadlineDate: "2027 申请日期尚未公布", applicantType: "国际申请者", intake: raw.intake ?? "2027 Entry", deadlineType: "待公布", officialUrl: raw.officialDeadlineUrl ?? officialRequirementUrl }],
+    officialUniversityUrl: raw.officialUniversityUrl ?? officialProgramUrl,
+    officialProgramUrl,
+    officialRequirementUrl,
+    officialAcademicRequirementUrl: raw.officialAcademicRequirementUrl ?? officialRequirementUrl,
+    officialLanguageRequirementUrl: raw.officialLanguageRequirementUrl ?? officialRequirementUrl,
+    officialWorkExperienceUrl: raw.officialWorkExperienceUrl ?? officialRequirementUrl,
+    officialDocumentRequirementUrl: raw.officialDocumentRequirementUrl ?? officialRequirementUrl,
+    officialDeadlineUrl: raw.officialDeadlineUrl ?? officialRequirementUrl,
+    officialFeeUrl: raw.officialFeeUrl ?? officialProgramUrl,
+    officialApplicationUrl: raw.officialApplicationUrl ?? null,
+    officialScholarshipUrl: raw.officialScholarshipUrl ?? null,
+    qsUrl: raw.qsUrl ?? null,
+    dataSource: unique(raw.dataSource ?? [officialProgramUrl, officialRequirementUrl]),
+    lastUpdated: "2026-09-06",
+    sourceLastChecked: "2026-09-06",
+    verificationStatus: "needs_review",
+    verificationNotes: raw.verificationNotes ?? "需在申请前复核招生周期、费用与项目级录取细则。",
+  };
+}
+
+function enrichProgram(program) {
+  const academicOriginal = program.academicRequirementOriginal ?? program.academicRequirement ?? null;
+  const workExperience = program.workExperienceRequirement ?? null;
+  const programUrl = program.officialProgramUrl ?? null;
+  const admissionUrl = program.officialRequirementUrl ?? programUrl;
+  const intakeYear = String(program.intake ?? "").match(/20\d{2}/)?.[0] ?? null;
+  return {
+    ...program,
+    subjectCategory: program.subjectCategory ?? program.subjectArea ?? null,
+    durationText: program.durationText ?? program.durationLabel ?? null,
+    intakeMonth: program.intakeMonth ?? null,
+    academicYear: program.academicYear ?? (intakeYear ? `${intakeYear} Entry` : null),
+    admissionCycle: program.admissionCycle ?? (intakeYear ? `${intakeYear} Entry` : null),
+    academicRequirementOriginal: academicOriginal,
+    minimumGrade: program.minimumGrade ?? null,
+    minimumPercentage: program.minimumPercentage ?? null,
+    qualificationLevel: program.qualificationLevel ?? null,
+    mathematicsRequirement: program.mathematicsRequirement ?? program.prerequisiteCourses ?? null,
+    academicRequirements: program.academicRequirements ?? { original: academicOriginal, scale: program.academicScale ?? null, minimumGrade: program.minimumGrade ?? null, minimumGpa: program.minimumGpa ?? null, minimumPercentage: program.minimumPercentage ?? null, qualificationLevel: program.qualificationLevel ?? null, normalizedScore: program.minimumAcademicScoreNormalized ?? null },
+    backgroundRequirements: program.backgroundRequirements ?? { original: program.backgroundRequirement ?? null, prerequisiteCourses: program.prerequisiteCourses ?? null, mathematicsRequirement: program.mathematicsRequirement ?? program.prerequisiteCourses ?? null },
+    workExperienceRequirements: program.workExperienceRequirements ?? { original: workExperience, required: workExperience ? !/无强制|不要求|not required/i.test(workExperience) : null, minimumYears: null, fields: null, mbaOnly: /MBA|EMBA/i.test(program.programNameEn) },
+    greGmatRequirements: program.greGmatRequirements ?? { required: null, recommended: null, greMinimum: null, gmatMinimum: null, waiver: null },
+    documentRequirements: program.documentRequirements ?? { personalStatement: program.personalStatementRequirement ?? null, statementOfPurpose: null, cv: null, references: program.recommendationRequirement ?? null, transcript: null, degreeCertificate: null, writingSample: null, portfolio: program.portfolioRequirement ?? null, researchProposal: null },
+    admissionRequirementScope: program.admissionRequirementScope ?? "program",
+    languageRequirementScope: program.languageRequirementScope ?? (program.lastUpdated === "2026-09-06" || /通用|统一|学校整体|研究生院统一|国际研究生英语语言要求|university[- ]wide|general university/i.test(program.languageRequirementDetails ?? "") ? "institutional_reference" : "program"),
+    tuitionAmount: program.tuitionAmount ?? program.tuition ?? null,
+    tuitionAcademicYear: program.tuitionAcademicYear ?? program.academicYear ?? null,
+    tuitionUrl: program.tuitionUrl ?? program.officialFeeUrl ?? programUrl,
+    applicationLinks: program.applicationLinks ?? { program: programUrl, admission: admissionUrl, language: program.officialLanguageRequirementUrl ?? admissionUrl, academic: program.officialAcademicRequirementUrl ?? admissionUrl, tuition: program.officialFeeUrl ?? programUrl, deadline: program.officialDeadlineUrl ?? admissionUrl, application: program.officialApplicationUrl ?? null },
+    sourceLastChecked: program.sourceLastChecked ?? program.lastUpdated ?? "unknown",
+  };
+}
+
 function costItem(key, label, amountCny, amountOriginal, currency, source, type = "estimated") {
   return {
     key,
@@ -308,11 +466,78 @@ try {
   if (error?.code !== "ENOENT") throw error;
 }
 
+try {
+  const curatedCatalog = JSON.parse(await readFile(curatedExpansionPath, "utf8"));
+  if (Array.isArray(curatedCatalog.programs)) programs.push(...curatedCatalog.programs.map(normalizeCuratedProgram));
+} catch (error) {
+  if (error?.code !== "ENOENT") throw error;
+}
+
+const enrichedPrograms = programs.map(enrichProgram);
+
+const coordinateByUniversityId = {
+  "uni-nus": [103.7764, 1.2966],
+  "uni-ntu": [103.6831, 1.3483],
+  "uni-smu": [103.8499, 1.2966],
+  "uni-um": [101.662, 3.1201],
+  "uni-upm": [101.704, 3.012],
+  "uni-ukm": [101.78, 2.922],
+  "uni-usm": [100.305, 5.356],
+  "uni-utm": [103.736, 1.559],
+  "uni-taylors": [101.616, 3.065],
+  "uni-suss": [103.849, 1.334],
+  "uni-jcu-singapore": [103.850, 1.326],
+  "uni-chula": [100.533, 13.738],
+  "uni-thammasat": [100.493, 13.756],
+  "uni-mahidol": [100.325, 13.794],
+  "uni-muic": [100.325, 13.794],
+};
+
+const universityTypeById = {
+  "uni-upm": "公立研究型大学",
+  "uni-ukm": "公立研究型大学",
+  "uni-usm": "公立研究型大学",
+  "uni-utm": "公立研究型大学",
+  "uni-taylors": "私立大学",
+  "uni-suss": "公立大学（应用型）",
+  "uni-jcu-singapore": "海外大学新加坡校区",
+  "uni-mahidol": "公立研究型大学",
+  "uni-muic": "大学学院 / 学位授予：Mahidol University",
+};
+
+const universities = [...new Map(enrichedPrograms.map((program) => [program.universityId, program])).values()].map((program) => {
+  const sameUniversity = enrichedPrograms.filter((item) => item.universityId === program.universityId);
+  const rankSource = sameUniversity.find((item) => item.qsRank !== null) ?? program;
+  const coords = coordinateByUniversityId[program.universityId] ?? null;
+  return {
+    id: program.universityId,
+    nameZh: program.universityNameZh,
+    nameEn: program.universityNameEn ?? null,
+    shortName: program.universityShortName ?? null,
+    country: program.country,
+    region: program.region,
+    city: program.city ?? null,
+    universityType: universityTypeById[program.universityId] ?? null,
+    qsRank: rankSource.qsRank ?? null,
+    qsRankLabel: rankSource.qsRankLabel ?? null,
+    qsYear: rankSource.qsYear ?? null,
+    universityUrl: program.officialUniversityUrl ?? null,
+    qsUrl: rankSource.qsUrl ?? null,
+    latitude: coords?.[1] ?? null,
+    longitude: coords?.[0] ?? null,
+  };
+});
+
 await mkdir(outputDirectory, { recursive: true });
 await writeFile(
   outputPath,
-  `${JSON.stringify({ schemaVersion: 2, lastMigratedAt: "2026-07-19", programs }, null, 2)}\n`,
+  `${JSON.stringify({ schemaVersion: 3, lastMigratedAt: "2026-09-06", programs: enrichedPrograms }, null, 2)}\n`,
+  "utf8",
+);
+await writeFile(
+  path.join(outputDirectory, "universities.json"),
+  `${JSON.stringify({ schemaVersion: 1, lastMigratedAt: "2026-09-06", universities }, null, 2)}\n`,
   "utf8",
 );
 
-console.log(`Migrated ${programs.length} programs to ${path.relative(projectRoot, outputPath)}`);
+console.log(`Migrated ${enrichedPrograms.length} programs and ${universities.length} universities`);

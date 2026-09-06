@@ -5,8 +5,9 @@ import test from "node:test";
 const catalog = JSON.parse(await readFile(new URL("../data/programs.json", import.meta.url), "utf8"));
 
 test("normalizes every legacy program into a unique extensible record", () => {
-  assert.equal(catalog.programs.length, 28);
-  assert.equal(new Set(catalog.programs.map((program) => program.programId)).size, 28);
+  assert.ok(catalog.programs.length >= 40);
+  assert.equal(new Set(catalog.programs.map((program) => program.programId)).size, catalog.programs.length);
+  assert.equal(catalog.schemaVersion, 3);
   assert.ok(new Set(catalog.programs.map((program) => program.region)).size >= 5);
   for (const program of catalog.programs) {
     assert.ok(program.universityId);
@@ -17,6 +18,13 @@ test("normalizes every legacy program into a unique extensible record", () => {
     assert.ok(Array.isArray(program.languageRequirements));
     assert.ok(Array.isArray(program.costBreakdown));
     assert.ok(Array.isArray(program.dataSource));
+    assert.equal(typeof program.universityId, "string");
+    assert.ok(program.subjectCategory);
+    assert.ok(program.academicRequirements);
+    assert.ok(program.backgroundRequirements);
+    assert.ok(program.applicationLinks);
+    assert.ok(program.admissionCycle || program.academicYear === null);
+    assert.ok(program.sourceLastChecked);
     assert.doesNotMatch(program.durationLabel ?? "", /排除/);
   }
 });
