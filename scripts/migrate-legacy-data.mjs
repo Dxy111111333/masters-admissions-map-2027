@@ -6,6 +6,7 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 const sourceDirectory = path.join(projectRoot, "content", "regions");
 const outputDirectory = path.join(projectRoot, "data");
 const outputPath = path.join(outputDirectory, "programs.json");
+const additionalProgramsPath = path.join(projectRoot, "content", "additional-programs.json");
 
 const regionMeta = {
   香港: { country: "中国", region: "中国香港", code: "hk", currency: "HKD" },
@@ -298,6 +299,13 @@ const programs = [];
 for (const sourceRegion of Object.keys(regionMeta)) {
   const html = await readFile(path.join(sourceDirectory, `${sourceRegion}.html`), "utf8");
   for (const rawProgram of extractJsonArray(html)) programs.push(normalizeProgram(rawProgram, sourceRegion));
+}
+
+try {
+  const additionalCatalog = JSON.parse(await readFile(additionalProgramsPath, "utf8"));
+  if (Array.isArray(additionalCatalog.programs)) programs.push(...additionalCatalog.programs);
+} catch (error) {
+  if (error?.code !== "ENOENT") throw error;
 }
 
 await mkdir(outputDirectory, { recursive: true });

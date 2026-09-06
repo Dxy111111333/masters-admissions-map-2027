@@ -12,6 +12,9 @@ export const regionPresentation: Record<string, { code: string; nameEn: string; 
   英国: { code: "UK", nameEn: "United Kingdom", note: "一年制项目丰富，选择跨度大", accent: "blue", latitude: 54.5, longitude: -3.4 },
   新西兰: { code: "NZ", nameEn: "New Zealand", note: "生活节奏舒展，学制选择多样", accent: "green", latitude: -41.3, longitude: 174.8 },
   湾区校区: { code: "GBA", nameEn: "Greater Bay Area", note: "国际课程与湾区产业连接", accent: "gold", latitude: 22.9, longitude: 113.4 },
+  新加坡: { code: "SG", nameEn: "Singapore", note: "亚洲金融与商业分析项目密集", accent: "rose", latitude: 1.3521, longitude: 103.8198 },
+  马来西亚: { code: "MY", nameEn: "Malaysia", note: "成本友好，英联邦商科选择多", accent: "green", latitude: 3.139, longitude: 101.6869 },
+  泰国: { code: "TH", nameEn: "Thailand", note: "东盟商业、旅游与发展议题连接", accent: "gold", latitude: 13.7563, longitude: 100.5018 },
 };
 
 export function getRegions() {
