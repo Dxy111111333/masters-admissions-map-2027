@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastMigratedAt": "2026-09-06",
+  "lastMigratedAt": "2026-09-07",
   "universities": [
     {
       "id": "uni-1214hu6",
@@ -640,11 +640,11 @@
       "region": "马来西亚",
       "city": "Subang Jaya",
       "universityType": "私立大学",
-      "qsRank": null,
-      "qsRankLabel": null,
+      "qsRank": 272,
+      "qsRankLabel": "272",
       "qsYear": 2027,
       "universityUrl": "https://university.taylors.edu.my/",
-      "qsUrl": null,
+      "qsUrl": "https://www.topuniversities.com/world-university-rankings?countries=my&items_per_page=150",
       "latitude": 3.065,
       "longitude": 101.616
     },
@@ -715,6 +715,40 @@
       "qsUrl": "https://www.topuniversities.com/universities/mahidol-university",
       "latitude": 13.794,
       "longitude": 100.325
+    },
+    {
+      "id": "uni-apu",
+      "nameZh": "亚太科技大学",
+      "nameEn": "Asia Pacific University of Technology and Innovation",
+      "shortName": "APU",
+      "country": "马来西亚",
+      "region": "马来西亚",
+      "city": "Kuala Lumpur",
+      "universityType": "私立大学 / 数字科技与商科",
+      "qsRank": 528,
+      "qsRankLabel": "=528",
+      "qsYear": 2027,
+      "universityUrl": "https://www.apu.edu.my/",
+      "qsUrl": "https://www.topuniversities.com/universities/asia-pacific-university-technology-innovation-apu-malaysia",
+      "latitude": 3.055,
+      "longitude": 101.7
+    },
+    {
+      "id": "uni-utas",
+      "nameZh": "塔斯马尼亚大学",
+      "nameEn": "University of Tasmania",
+      "shortName": "UTAS",
+      "country": "澳大利亚",
+      "region": "澳大利亚",
+      "city": "Launceston",
+      "universityType": "公立研究型大学",
+      "qsRank": 311,
+      "qsRankLabel": "311",
+      "qsYear": 2027,
+      "universityUrl": "https://www.utas.edu.au/",
+      "qsUrl": "https://www.topuniversities.com/universities/university-tasmania",
+      "latitude": -42.904,
+      "longitude": 147.327
     }
   ]
 }

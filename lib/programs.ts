@@ -19,6 +19,7 @@ export const regionPresentation: Record<string, { code: string; nameEn: string; 
   新加坡: { code: "SG", nameEn: "Singapore", note: "亚洲金融与商业分析项目密集", accent: "rose", latitude: 1.3521, longitude: 103.8198 },
   马来西亚: { code: "MY", nameEn: "Malaysia", note: "成本友好，英联邦商科选择多", accent: "green", latitude: 3.139, longitude: 101.6869 },
   泰国: { code: "TH", nameEn: "Thailand", note: "东盟商业、旅游与发展议题连接", accent: "gold", latitude: 13.7563, longitude: 100.5018 },
+  澳大利亚: { code: "AU", nameEn: "Australia", note: "可重点寻找 IELTS 6.0 且小分 6.0 的管理类项目", accent: "blue", latitude: -25.2744, longitude: 133.7751 },
 };
 
 export function getRegions() {

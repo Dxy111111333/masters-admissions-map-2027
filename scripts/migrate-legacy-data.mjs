@@ -9,6 +9,7 @@ const outputPath = path.join(outputDirectory, "programs.json");
 const additionalProgramsPath = path.join(projectRoot, "content", "additional-programs.json");
 const curatedExpansionPath = path.join(projectRoot, "content", "program-expansion.json");
 const cuhkProgramsPath = path.join(projectRoot, "content", "cuhk-programs.json");
+const lowLanguageProgramsPath = path.join(projectRoot, "content", "low-language-programs.json");
 
 const regionMeta = {
   香港: { country: "中国", region: "中国香港", code: "hk", currency: "HKD" },
@@ -238,7 +239,7 @@ function normalizeCuratedProgram(raw) {
     minimumPercentage: numberOrNull(raw.minimumPercentage),
     qualificationLevel: raw.qualificationLevel ?? null,
     minimumAcademicScoreNormalized: numberOrNull(raw.minimumAcademicScoreNormalized),
-    gradeRequirementSourceType: raw.minimumAcademicScoreNormalized === undefined ? "manual_review" : "official",
+    gradeRequirementSourceType: raw.gradeRequirementSourceType ?? (raw.minimumAcademicScoreNormalized === undefined ? "manual_review" : "official"),
     gradeRequirementSourceLabel: raw.gradeRequirementSourceLabel ?? null,
     gradeRequirementSourceUrl: raw.gradeRequirementSourceUrl ?? officialRequirementUrl,
     equivalentGradeRequirements: raw.equivalentGradeRequirements ?? {},
@@ -252,7 +253,7 @@ function normalizeCuratedProgram(raw) {
     portfolioRequirement: raw.portfolioRequirement ?? null,
     academicRequirements: { original: academicOriginal, scale: raw.academicScale ?? "official_text", minimumGrade: numberOrNull(raw.minimumGrade), minimumGpa: numberOrNull(raw.minimumGpa), minimumPercentage: numberOrNull(raw.minimumPercentage), qualificationLevel: raw.qualificationLevel ?? null, normalizedScore: numberOrNull(raw.minimumAcademicScoreNormalized) },
     backgroundRequirements: { original: raw.backgroundRequirement ?? null, prerequisiteCourses: raw.prerequisiteCourses ?? null, mathematicsRequirement: raw.mathematicsRequirement ?? null },
-    workExperienceRequirements: { original: workExperience, required: workExperience ? !/无强制|不要求|not required/i.test(workExperience) : null, minimumYears: null, fields: null, mbaOnly: /MBA|EMBA/i.test(raw.programNameEn) },
+    workExperienceRequirements: { original: workExperience, required: workExperience ? !/无强制|不要求|no compulsory|not required|no compulsory work/i.test(workExperience) : null, minimumYears: null, fields: null, mbaOnly: /MBA|EMBA/i.test(raw.programNameEn) },
     greGmatRequirements: { required: null, recommended: null, greMinimum: null, gmatMinimum: null, waiver: null },
     documentRequirements: { personalStatement: raw.personalStatementRequirement ?? null, statementOfPurpose: null, cv: null, references: raw.recommendationRequirement ?? null, transcript: null, degreeCertificate: null, writingSample: null, portfolio: raw.portfolioRequirement ?? null, researchProposal: null },
     admissionRequirementScope: academicScope,
@@ -298,11 +299,22 @@ function normalizeCuratedProgram(raw) {
     officialScholarshipUrl: raw.officialScholarshipUrl ?? null,
     qsUrl: raw.qsUrl ?? null,
     dataSource: unique(raw.dataSource ?? [officialProgramUrl, officialRequirementUrl]),
-    lastUpdated: "2026-09-06",
-    sourceLastChecked: "2026-09-06",
+    lastUpdated: raw.lastUpdated ?? "2026-09-06",
+    sourceLastChecked: raw.sourceLastChecked ?? raw.lastUpdated ?? "2026-09-06",
     verificationStatus: "needs_review",
     verificationNotes: raw.verificationNotes ?? "需在申请前复核招生周期、费用与项目级录取细则。",
   };
+}
+
+function upsertCuratedPrograms(targetPrograms, rawPrograms) {
+  for (const rawProgram of rawPrograms) {
+    const existingIndex = targetPrograms.findIndex((program) => program.programId === rawProgram.programId);
+    if (existingIndex >= 0) {
+      targetPrograms[existingIndex] = normalizeCuratedProgram({ ...targetPrograms[existingIndex], ...rawProgram });
+    } else {
+      targetPrograms.push(normalizeCuratedProgram(rawProgram));
+    }
+  }
 }
 
 function enrichProgram(program) {
@@ -325,7 +337,7 @@ function enrichProgram(program) {
     mathematicsRequirement: program.mathematicsRequirement ?? program.prerequisiteCourses ?? null,
     academicRequirements: program.academicRequirements ?? { original: academicOriginal, scale: program.academicScale ?? null, minimumGrade: program.minimumGrade ?? null, minimumGpa: program.minimumGpa ?? null, minimumPercentage: program.minimumPercentage ?? null, qualificationLevel: program.qualificationLevel ?? null, normalizedScore: program.minimumAcademicScoreNormalized ?? null },
     backgroundRequirements: program.backgroundRequirements ?? { original: program.backgroundRequirement ?? null, prerequisiteCourses: program.prerequisiteCourses ?? null, mathematicsRequirement: program.mathematicsRequirement ?? program.prerequisiteCourses ?? null },
-    workExperienceRequirements: program.workExperienceRequirements ?? { original: workExperience, required: workExperience ? !/无强制|不要求|not required/i.test(workExperience) : null, minimumYears: null, fields: null, mbaOnly: /MBA|EMBA/i.test(program.programNameEn) },
+    workExperienceRequirements: program.workExperienceRequirements ?? { original: workExperience, required: workExperience ? !/无强制|不要求|no compulsory|not required|no compulsory work/i.test(workExperience) : null, minimumYears: null, fields: null, mbaOnly: /MBA|EMBA/i.test(program.programNameEn) },
     greGmatRequirements: program.greGmatRequirements ?? { required: null, recommended: null, greMinimum: null, gmatMinimum: null, waiver: null },
     documentRequirements: program.documentRequirements ?? { personalStatement: program.personalStatementRequirement ?? null, statementOfPurpose: null, cv: null, references: program.recommendationRequirement ?? null, transcript: null, degreeCertificate: null, writingSample: null, portfolio: program.portfolioRequirement ?? null, researchProposal: null },
     admissionRequirementScope: program.admissionRequirementScope ?? "program",
@@ -481,6 +493,13 @@ try {
   if (error?.code !== "ENOENT") throw error;
 }
 
+try {
+  const lowLanguageCatalog = JSON.parse(await readFile(lowLanguageProgramsPath, "utf8"));
+  if (Array.isArray(lowLanguageCatalog.programs)) upsertCuratedPrograms(programs, lowLanguageCatalog.programs);
+} catch (error) {
+  if (error?.code !== "ENOENT") throw error;
+}
+
 const enrichedPrograms = programs.map(enrichProgram);
 
 const coordinateByUniversityId = {
@@ -499,6 +518,8 @@ const coordinateByUniversityId = {
   "uni-thammasat": [100.493, 13.756],
   "uni-mahidol": [100.325, 13.794],
   "uni-muic": [100.325, 13.794],
+  "uni-apu": [101.700, 3.055],
+  "uni-utas": [147.327, -42.904],
 };
 
 const universityTypeById = {
@@ -511,6 +532,8 @@ const universityTypeById = {
   "uni-jcu-singapore": "海外大学新加坡校区",
   "uni-mahidol": "公立研究型大学",
   "uni-muic": "大学学院 / 学位授予：Mahidol University",
+  "uni-apu": "私立大学 / 数字科技与商科",
+  "uni-utas": "公立研究型大学",
 };
 
 const universities = [...new Map(enrichedPrograms.map((program) => [program.universityId, program])).values()].map((program) => {
@@ -539,12 +562,12 @@ const universities = [...new Map(enrichedPrograms.map((program) => [program.univ
 await mkdir(outputDirectory, { recursive: true });
 await writeFile(
   outputPath,
-  `${JSON.stringify({ schemaVersion: 3, lastMigratedAt: "2026-09-06", programs: enrichedPrograms }, null, 2)}\n`,
+  `${JSON.stringify({ schemaVersion: 3, lastMigratedAt: "2026-09-07", programs: enrichedPrograms }, null, 2)}\n`,
   "utf8",
 );
 await writeFile(
   path.join(outputDirectory, "universities.json"),
-  `${JSON.stringify({ schemaVersion: 1, lastMigratedAt: "2026-09-06", universities }, null, 2)}\n`,
+  `${JSON.stringify({ schemaVersion: 1, lastMigratedAt: "2026-09-07", universities }, null, 2)}\n`,
   "utf8",
 );
 

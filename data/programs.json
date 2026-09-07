@@ -1,6 +1,6 @@
 {
   "schemaVersion": 3,
-  "lastMigratedAt": "2026-09-06",
+  "lastMigratedAt": "2026-09-07",
   "programs": [
     {
       "universityId": "uni-1214hu6",
@@ -8704,6 +8704,7 @@
       "programNameEn": "Master of Economics",
       "programShortName": "Master of Economics",
       "subjectArea": "经济学",
+      "subjectCategory": "经济学",
       "country": "马来西亚",
       "region": "马来西亚",
       "city": "Kuala Lumpur",
@@ -8711,33 +8712,100 @@
       "studyMode": "全日制",
       "durationMonths": 18,
       "durationLabel": "1.5年",
-      "intake": "2027",
+      "durationText": "Full-time 3 semesters",
+      "intake": "October / March",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
       "credits": "42 Credits",
-      "courseStructure": "课程+研究项目/论文",
-      "completionRequirement": "完成课程学分、研究项目或论文及学院要求",
+      "courseStructure": "Coursework, research methodology and research project/dissertation requirements",
+      "completionRequirement": "Complete 42 credits, research project/dissertation route and faculty requirements.",
       "qsRank": 58,
       "qsRankLabel": "58",
       "qsYear": 2027,
       "qsIndependent": true,
-      "academicRequirement": "认可学士学位；经济学、商科、数学、统计或相关社会科学背景有利",
+      "academicRequirement": "Bachelor's degree with CGPA not less than 3.30; undergraduate Microeconomics and Macroeconomics should each be at least B+; interview is required.",
+      "academicRequirementOriginal": "Bachelor's degree with CGPA not less than 3.30; undergraduate Microeconomics and Macroeconomics should each be at least B+; interview is required.",
       "academicScale": "official_text",
-      "minimumGpa": null,
-      "minimumAcademicScoreNormalized": null,
-      "gradeRequirementSourceType": "manual_review",
-      "gradeRequirementSourceLabel": null,
-      "gradeRequirementSourceUrl": null,
-      "equivalentGradeRequirements": {},
-      "backgroundRequirement": "适合继续经济分析、公共政策、金融与发展研究方向",
-      "prerequisiteCourses": "经济学、统计学或定量方法基础有利",
-      "workExperienceRequirement": "无强制工作年限",
+      "minimumGpa": 3.3,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": 0.85,
+      "gradeRequirementSourceType": "official",
+      "gradeRequirementSourceLabel": "UM programme-level entry requirement",
+      "gradeRequirementSourceUrl": "https://study.um.edu.my/master-of-economics-coursework",
+      "equivalentGradeRequirements": {
+        "percentage": "约 83-86+",
+        "gpa4": "3.30/4.00",
+        "gpa5": "约 4.1/5.0",
+        "uk_honours": "Strong 2:1 reference"
+      },
+      "backgroundRequirement": "Economics background is important because the programme asks for Microeconomics and Macroeconomics at B+ level.",
+      "prerequisiteCourses": "Microeconomics and Macroeconomics at B+ level",
+      "mathematicsRequirement": "Microeconomics and Macroeconomics at B+ level",
+      "workExperienceRequirement": "No compulsory work-experience requirement found on the programme page.",
       "applicationMaterials": "在线申请、成绩单、学位证明、语言成绩、研究/目标陈述等，以官网为准",
       "recommendationRequirement": "以申请系统要求为准",
       "personalStatementRequirement": "通常需目标陈述或研究兴趣说明",
       "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "Bachelor's degree with CGPA not less than 3.30; undergraduate Microeconomics and Macroeconomics should each be at least B+; interview is required.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": 3.3,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": 0.85
+      },
+      "backgroundRequirements": {
+        "original": "Economics background is important because the programme asks for Microeconomics and Macroeconomics at B+ level.",
+        "prerequisiteCourses": "Microeconomics and Macroeconomics at B+ level",
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "No compulsory work-experience requirement found on the programme page.",
+        "required": false,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": "通常需目标陈述或研究兴趣说明",
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": "以申请系统要求为准",
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": 45100,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://study.um.edu.my/master-of-economics-coursework",
+      "applicationLinks": {
+        "program": "https://study.um.edu.my/master-of-economics-coursework",
+        "admission": "https://study.um.edu.my/master-of-economics-coursework",
+        "language": "https://study.um.edu.my/master-of-economics-coursework",
+        "academic": "https://study.um.edu.my/master-of-economics-coursework",
+        "tuition": "https://study.um.edu.my/master-of-economics-coursework",
+        "deadline": "https://fpe.um.edu.my/master-of-economics-mec",
+        "application": "https://maya.um.edu.my/"
+      },
       "languageRequirements": [
         {
           "test": "IELTS",
-          "overall": 5.5,
+          "overall": 6,
           "sectionMinimum": null,
           "sectionMinimums": {
             "reading": null,
@@ -8745,11 +8813,11 @@
             "listening": null,
             "speaking": null
           },
-          "raw": "IELTS 5.5 · TOEFL iBT 80"
+          "raw": "IELTS Academic: Band 6.0"
         },
         {
           "test": "TOEFL",
-          "overall": 80,
+          "overall": 60,
           "sectionMinimum": null,
           "sectionMinimums": {
             "reading": null,
@@ -8757,30 +8825,37 @@
             "listening": null,
             "speaking": null
           },
-          "raw": "IELTS 5.5 · TOEFL iBT 80"
+          "raw": "TOEFL iBT Centre-Based: Score 60"
+        },
+        {
+          "test": "PTE",
+          "overall": 59,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "PTE Academic: Score 59"
         }
       ],
-      "languageRequirementRaw": "IELTS 5.5 · TOEFL iBT 80",
-      "languageRequirementDetails": "按UM国际研究生英语语言要求整理；项目或学院可有更高要求。",
+      "languageRequirementRaw": "IELTS Academic 6.0 · TOEFL iBT 60 · PTE Academic 59",
+      "languageRequirementDetails": "UM programme page lists IELTS Academic Band 6.0, TOEFL iBT centre-based 60 and PTE Academic 59; no IELTS section minima were shown on the page.",
       "languagePolicyFacts": [
         {
-          "label": "英语授课豁免",
-          "value": "可按UM条件申请",
-          "tone": "good"
-        },
-        {
-          "label": "Home Edition",
-          "value": "需申请前复核",
+          "label": "IELTS小分",
+          "value": "官网未列单项最低分",
           "tone": "pending"
         },
         {
-          "label": "IELTS OSR",
-          "value": "需申请前复核",
+          "label": "面试",
+          "value": "Required",
           "tone": "pending"
         }
       ],
-      "tuition": 38600,
-      "tuitionCny": 64850,
+      "tuition": 45100,
+      "tuitionCny": 75768,
       "tuitionCurrency": "MYR",
       "tuitionPeriod": "完整学制",
       "livingCost": 36000,
@@ -8789,11 +8864,11 @@
       "visaAndApplicationCost": 4500,
       "transportCost": 6000,
       "otherCost": 12000,
-      "totalEstimatedCost": 95900,
-      "totalEstimatedCostCny": 161000,
+      "totalEstimatedCost": 102300,
+      "totalEstimatedCostCny": 171800,
       "exchangeRate": 1.68,
-      "exchangeRateDate": "2026-09-06",
-      "exchangeRateNote": "按规划估算汇率 MYR 1≈CNY 1.68",
+      "exchangeRateDate": "2026-09-07",
+      "exchangeRateNote": "Planning rate MYR 1≈CNY 1.68; final payment follows bank settlement.",
       "costBreakdown": [
         {
           "key": "tuition",
@@ -8880,91 +8955,25 @@
         }
       ],
       "officialUniversityUrl": "https://www.um.edu.my",
-      "officialProgramUrl": "https://fpe.um.edu.my/master-of-economics-mec",
-      "officialRequirementUrl": "https://fpe.um.edu.my/master-of-economics-mec",
-      "officialAcademicRequirementUrl": "https://fpe.um.edu.my/master-of-economics-mec",
-      "officialLanguageRequirementUrl": "https://study.um.edu.my/pg-business-and-economics",
+      "officialProgramUrl": "https://study.um.edu.my/master-of-economics-coursework",
+      "officialRequirementUrl": "https://study.um.edu.my/master-of-economics-coursework",
+      "officialAcademicRequirementUrl": "https://study.um.edu.my/master-of-economics-coursework",
+      "officialLanguageRequirementUrl": "https://study.um.edu.my/master-of-economics-coursework",
       "officialWorkExperienceUrl": "https://fpe.um.edu.my/master-of-economics-mec",
       "officialDocumentRequirementUrl": "https://fpe.um.edu.my/master-of-economics-mec",
       "officialDeadlineUrl": "https://fpe.um.edu.my/master-of-economics-mec",
-      "officialFeeUrl": "https://study.um.edu.my/doc/booklets/International%20Booklet%20-%20Updated%2015%20Dec%202025.pdf?_t=1765848550",
+      "officialFeeUrl": "https://study.um.edu.my/master-of-economics-coursework",
       "officialApplicationUrl": "https://maya.um.edu.my/",
       "officialScholarshipUrl": "https://study.um.edu.my/scholarships",
       "qsUrl": "https://www.topuniversities.com/universities/universiti-malaya-um",
       "dataSource": [
-        "https://fpe.um.edu.my/master-of-economics-mec",
-        "https://study.um.edu.my/pg-business-and-economics",
-        "https://study.um.edu.my/doc/booklets/International%20Booklet%20-%20Updated%2015%20Dec%202025.pdf?_t=1765848550",
-        "https://maya.um.edu.my/",
+        "https://study.um.edu.my/master-of-economics-coursework",
         "https://www.topuniversities.com/universities/universiti-malaya-um"
       ],
-      "lastUpdated": "2026-09-06",
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
       "verificationStatus": "needs_review",
-      "verificationNotes": "UM项目页信息分散，需在正式申请前逐项复核课程、学费和语言细则",
-      "subjectCategory": "经济学",
-      "durationText": "1.5年",
-      "intakeMonth": null,
-      "academicYear": "2027 Entry",
-      "admissionCycle": "2027 Entry",
-      "academicRequirementOriginal": "认可学士学位；经济学、商科、数学、统计或相关社会科学背景有利",
-      "minimumGrade": null,
-      "minimumPercentage": null,
-      "qualificationLevel": null,
-      "mathematicsRequirement": "经济学、统计学或定量方法基础有利",
-      "academicRequirements": {
-        "original": "认可学士学位；经济学、商科、数学、统计或相关社会科学背景有利",
-        "scale": "official_text",
-        "minimumGrade": null,
-        "minimumGpa": null,
-        "minimumPercentage": null,
-        "qualificationLevel": null,
-        "normalizedScore": null
-      },
-      "backgroundRequirements": {
-        "original": "适合继续经济分析、公共政策、金融与发展研究方向",
-        "prerequisiteCourses": "经济学、统计学或定量方法基础有利",
-        "mathematicsRequirement": "经济学、统计学或定量方法基础有利"
-      },
-      "workExperienceRequirements": {
-        "original": "无强制工作年限",
-        "required": false,
-        "minimumYears": null,
-        "fields": null,
-        "mbaOnly": false
-      },
-      "greGmatRequirements": {
-        "required": null,
-        "recommended": null,
-        "greMinimum": null,
-        "gmatMinimum": null,
-        "waiver": null
-      },
-      "documentRequirements": {
-        "personalStatement": "通常需目标陈述或研究兴趣说明",
-        "statementOfPurpose": null,
-        "cv": null,
-        "references": "以申请系统要求为准",
-        "transcript": null,
-        "degreeCertificate": null,
-        "writingSample": null,
-        "portfolio": null,
-        "researchProposal": null
-      },
-      "admissionRequirementScope": "program",
-      "languageRequirementScope": "institutional_reference",
-      "tuitionAmount": 38600,
-      "tuitionAcademicYear": null,
-      "tuitionUrl": "https://study.um.edu.my/doc/booklets/International%20Booklet%20-%20Updated%2015%20Dec%202025.pdf?_t=1765848550",
-      "applicationLinks": {
-        "program": "https://fpe.um.edu.my/master-of-economics-mec",
-        "admission": "https://fpe.um.edu.my/master-of-economics-mec",
-        "language": "https://study.um.edu.my/pg-business-and-economics",
-        "academic": "https://fpe.um.edu.my/master-of-economics-mec",
-        "tuition": "https://study.um.edu.my/doc/booklets/International%20Booklet%20-%20Updated%2015%20Dec%202025.pdf?_t=1765848550",
-        "deadline": "https://fpe.um.edu.my/master-of-economics-mec",
-        "application": "https://maya.um.edu.my/"
-      },
-      "sourceLastChecked": "2026-09-06"
+      "verificationNotes": "Corrected old IELTS 5.5 record to the programme-page requirement of IELTS Academic 6.0; section minima were not listed."
     },
     {
       "universityId": "uni-monash-malaysia",
@@ -10717,19 +10726,19 @@
       "credits": null,
       "courseStructure": null,
       "completionRequirement": null,
-      "qsRank": null,
-      "qsRankLabel": null,
+      "qsRank": 272,
+      "qsRankLabel": "272",
       "qsYear": 2027,
       "qsIndependent": true,
-      "academicRequirement": "Bachelor's degree in the field or related fields with CGPA ≥ 2.75；官网同时列出较低CGPA与工作经验路径。",
-      "academicRequirementOriginal": "Bachelor's degree in the field or related fields with CGPA ≥ 2.75；官网同时列出较低CGPA与工作经验路径。",
+      "academicRequirement": "Bachelor's degree in the field or related fields with CGPA >= 2.75; CGPA 2.50-2.74 may be considered with at least 2 years related work experience and rigorous internal assessment; lower CGPA route requires at least 5 years related work experience.",
+      "academicRequirementOriginal": "Bachelor's degree in the field or related fields with CGPA >= 2.75; CGPA 2.50-2.74 may be considered with at least 2 years related work experience and rigorous internal assessment; lower CGPA route requires at least 5 years related work experience.",
       "academicScale": "official_text",
-      "minimumGpa": null,
+      "minimumGpa": 2.75,
       "minimumGrade": null,
       "minimumPercentage": null,
       "qualificationLevel": null,
-      "minimumAcademicScoreNormalized": null,
-      "gradeRequirementSourceType": "manual_review",
+      "minimumAcademicScoreNormalized": 0.74,
+      "gradeRequirementSourceType": "official",
       "gradeRequirementSourceLabel": null,
       "gradeRequirementSourceUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-business-administration.html",
       "equivalentGradeRequirements": {},
@@ -10742,13 +10751,13 @@
       "personalStatementRequirement": null,
       "portfolioRequirement": null,
       "academicRequirements": {
-        "original": "Bachelor's degree in the field or related fields with CGPA ≥ 2.75；官网同时列出较低CGPA与工作经验路径。",
+        "original": "Bachelor's degree in the field or related fields with CGPA >= 2.75; CGPA 2.50-2.74 may be considered with at least 2 years related work experience and rigorous internal assessment; lower CGPA route requires at least 5 years related work experience.",
         "scale": "official_text",
         "minimumGrade": null,
-        "minimumGpa": null,
+        "minimumGpa": 2.75,
         "minimumPercentage": null,
         "qualificationLevel": null,
-        "normalizedScore": null
+        "normalizedScore": 0.74
       },
       "backgroundRequirements": {
         "original": "本科学位需为相关领域或经学校认可的等同学历。",
@@ -10781,7 +10790,7 @@
         "researchProposal": null
       },
       "admissionRequirementScope": "program",
-      "languageRequirementScope": "manual_review",
+      "languageRequirementScope": "program",
       "tuitionAmount": null,
       "tuitionAcademicYear": "2027 Entry",
       "tuitionUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-business-administration.html",
@@ -10794,10 +10803,53 @@
         "deadline": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-business-administration.html",
         "application": "https://university.taylors.edu.my/en/study/how-to-apply.html"
       },
-      "languageRequirements": [],
-      "languageRequirementRaw": null,
-      "languageRequirementDetails": null,
-      "languagePolicyFacts": [],
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Band 6.0"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 60,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT 60"
+        },
+        {
+          "test": "PTE",
+          "overall": 59,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "PTE Academic 59"
+        }
+      ],
+      "languageRequirementRaw": "IELTS 6.0 · TOEFL iBT 60 · PTE Academic 59",
+      "languageRequirementDetails": "Taylor's MBA page lists IELTS 6.0 and equivalent English tests; IELTS section minima were not listed.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "官网未列单项最低分",
+          "tone": "pending"
+        }
+      ],
       "tuition": null,
       "tuitionCny": null,
       "tuitionCurrency": "",
@@ -10909,15 +10961,15 @@
       "officialFeeUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-business-administration.html",
       "officialApplicationUrl": "https://university.taylors.edu.my/en/study/how-to-apply.html",
       "officialScholarshipUrl": null,
-      "qsUrl": null,
+      "qsUrl": "https://www.topuniversities.com/world-university-rankings?countries=my&items_per_page=150",
       "dataSource": [
         "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-business-administration.html",
-        "https://university.taylors.edu.my/en/study/how-to-apply.html"
+        "https://www.topuniversities.com/world-university-rankings?countries=my&items_per_page=150"
       ],
-      "lastUpdated": "2026-09-06",
-      "sourceLastChecked": "2026-09-06",
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
       "verificationStatus": "needs_review",
-      "verificationNotes": "学术、工作经验、学制和intake来自2026项目页面；2027费用与最终语言细则需重新确认。"
+      "verificationNotes": "Updated with programme-level IELTS and CGPA routes from Taylor's official page; QS rank from QS 2027 Malaysia filtered table."
     },
     {
       "universityId": "uni-suss",
@@ -13171,6 +13223,2396 @@
       "sourceLastChecked": "2026-09-06",
       "verificationStatus": "needs_review",
       "verificationNotes": "项目页确认全日制1年、30 units、HK$380,000学费及3年工作经验优先；截止日期需按2027招生轮次更新。"
+    },
+    {
+      "universityId": "uni-um",
+      "programId": "my-um-master-management",
+      "universityNameZh": "马来亚大学",
+      "universityNameEn": "Universiti Malaya",
+      "universityShortName": "UM",
+      "programNameZh": null,
+      "programNameEn": "Master of Management",
+      "programShortName": "Master of Management",
+      "subjectArea": "管理学",
+      "subjectCategory": "管理学",
+      "country": "马来西亚",
+      "region": "马来西亚",
+      "city": "Kuala Lumpur",
+      "degreeType": "Master",
+      "studyMode": "全日制",
+      "durationMonths": 18,
+      "durationLabel": "1.5年",
+      "durationText": "Full-time 3 semesters; average 1.5-2 years",
+      "intake": "October / March",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": "43 Credits",
+      "courseStructure": "40 core credits plus 3 elective credits, including research methodology and research project.",
+      "completionRequirement": "Complete at least 43 credit hours and pass the faculty interview/admission conditions.",
+      "qsRank": 58,
+      "qsRankLabel": "58",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 can be considered through UM graduate route, work experience, publication, scholarship, government service, interview or special faculty evaluation.",
+      "academicRequirementOriginal": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 can be considered through UM graduate route, work experience, publication, scholarship, government service, interview or special faculty evaluation.",
+      "academicScale": "official_text",
+      "minimumGpa": 3,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": 0.8,
+      "gradeRequirementSourceType": "official",
+      "gradeRequirementSourceLabel": "UM programme-level entry requirement",
+      "gradeRequirementSourceUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "equivalentGradeRequirements": {
+        "percentage": "约 80+",
+        "gpa4": "3.00/4.00",
+        "gpa5": "约 4.0/5.0",
+        "uk_honours": "2:1 reference"
+      },
+      "backgroundRequirement": "The official page lists no specific related-field restriction; interview is required.",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "Not required for CGPA 3.00+ route; one year related work experience can support CGPA 2.50-2.99 route.",
+      "applicationMaterials": "Online application, transcript, degree certificate, English score and supporting documents required by UM application system.",
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 can be considered through UM graduate route, work experience, publication, scholarship, government service, interview or special faculty evaluation.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": 3,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": 0.8
+      },
+      "backgroundRequirements": {
+        "original": "The official page lists no specific related-field restriction; interview is required.",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "Not required for CGPA 3.00+ route; one year related work experience can support CGPA 2.50-2.99 route.",
+        "required": false,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": 60100,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "applicationLinks": {
+        "program": "https://study.um.edu.my/master-of-management-coursework",
+        "admission": "https://study.um.edu.my/master-of-management-coursework",
+        "language": "https://study.um.edu.my/master-of-management-coursework",
+        "academic": "https://study.um.edu.my/master-of-management-coursework",
+        "tuition": "https://study.um.edu.my/master-of-management-coursework",
+        "deadline": "https://study.um.edu.my/master-of-management-coursework",
+        "application": "https://maya.um.edu.my/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic: Band 6.0"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 60,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT Centre-Based: Score 60"
+        },
+        {
+          "test": "PTE",
+          "overall": 59,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "PTE Academic: Score 59"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.0 · TOEFL iBT 60 · PTE Academic 59",
+      "languageRequirementDetails": "UM programme page lists IELTS Academic Band 6.0; no IELTS section minima were shown on the page.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "官网未列单项最低分",
+          "tone": "pending"
+        },
+        {
+          "label": "面试",
+          "value": "Required",
+          "tone": "pending"
+        }
+      ],
+      "tuition": 60100,
+      "tuitionCny": 100968,
+      "tuitionCurrency": "MYR",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 36000,
+      "accommodationCost": 36000,
+      "insuranceCost": 2500,
+      "visaAndApplicationCost": 4500,
+      "transportCost": 6000,
+      "otherCost": 12000,
+      "totalEstimatedCost": 117838,
+      "totalEstimatedCostCny": 197968,
+      "exchangeRate": 1.68,
+      "exchangeRateDate": "2026-09-07",
+      "exchangeRateNote": "Planning rate MYR 1≈CNY 1.68; living costs are planning estimates.",
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027待公布；October / March intake",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "October / March",
+          "deadlineType": "待公布",
+          "officialUrl": "https://study.um.edu.my/master-of-management-coursework"
+        }
+      ],
+      "officialUniversityUrl": "https://www.um.edu.my",
+      "officialProgramUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "officialRequirementUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "officialAcademicRequirementUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "officialLanguageRequirementUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "officialWorkExperienceUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "officialDocumentRequirementUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "officialDeadlineUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "officialFeeUrl": "https://study.um.edu.my/master-of-management-coursework",
+      "officialApplicationUrl": "https://maya.um.edu.my/",
+      "officialScholarshipUrl": "https://study.um.edu.my/scholarships",
+      "qsUrl": "https://www.topuniversities.com/universities/universiti-malaya-um",
+      "dataSource": [
+        "https://study.um.edu.my/master-of-management-coursework",
+        "https://maya.um.edu.my/",
+        "https://www.topuniversities.com/universities/universiti-malaya-um"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Programme-level language and CGPA found on official Study@UM page; 2027 application deadline remains intake-based until formal deadline is released."
+    },
+    {
+      "universityId": "uni-um",
+      "programId": "my-um-mba",
+      "universityNameZh": "马来亚大学",
+      "universityNameEn": "Universiti Malaya",
+      "universityShortName": "UM",
+      "programNameZh": null,
+      "programNameEn": "Master of Business Administration",
+      "programShortName": "MBA",
+      "subjectArea": "工商管理",
+      "subjectCategory": "工商管理",
+      "country": "马来西亚",
+      "region": "马来西亚",
+      "city": "Kuala Lumpur",
+      "degreeType": "MBA",
+      "studyMode": "全日制",
+      "durationMonths": 18,
+      "durationLabel": "1.5年",
+      "durationText": "Full-time 3 semesters",
+      "intake": "October / March",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": "46 Credits",
+      "courseStructure": "Core management modules, electives and applied project requirements.",
+      "completionRequirement": "Complete 46 credits and faculty admission/interview requirements.",
+      "qsRank": 58,
+      "qsRankLabel": "58",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through the official alternative routes.",
+      "academicRequirementOriginal": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through the official alternative routes.",
+      "academicScale": "official_text",
+      "minimumGpa": 3,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": 0.8,
+      "gradeRequirementSourceType": "official",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "Business, management and professional backgrounds are suitable; interview is required.",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "Not required for the main CGPA 3.00+ route; related experience can support lower-CGPA consideration.",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through the official alternative routes.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": 3,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": 0.8
+      },
+      "backgroundRequirements": {
+        "original": "Business, management and professional backgrounds are suitable; interview is required.",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "Not required for the main CGPA 3.00+ route; related experience can support lower-CGPA consideration.",
+        "required": false,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": 79100,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "applicationLinks": {
+        "program": "https://study.um.edu.my/master-of-business-administration-coursework",
+        "admission": "https://study.um.edu.my/master-of-business-administration-coursework",
+        "language": "https://study.um.edu.my/master-of-business-administration-coursework",
+        "academic": "https://study.um.edu.my/master-of-business-administration-coursework",
+        "tuition": "https://study.um.edu.my/master-of-business-administration-coursework",
+        "deadline": "https://study.um.edu.my/master-of-business-administration-coursework",
+        "application": "https://maya.um.edu.my/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic: Band 6.0"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 60,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT Centre-Based: Score 60"
+        },
+        {
+          "test": "PTE",
+          "overall": 59,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "PTE Academic: Score 59"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.0 · TOEFL iBT 60 · PTE Academic 59",
+      "languageRequirementDetails": "UM programme page lists IELTS Academic Band 6.0; no IELTS section minima were shown on the page.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "官网未列单项最低分",
+          "tone": "pending"
+        },
+        {
+          "label": "面试",
+          "value": "Required",
+          "tone": "pending"
+        }
+      ],
+      "tuition": 79100,
+      "tuitionCny": 132888,
+      "tuitionCurrency": "MYR",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 36000,
+      "accommodationCost": 36000,
+      "insuranceCost": 2500,
+      "visaAndApplicationCost": 4500,
+      "transportCost": 6000,
+      "otherCost": 12000,
+      "totalEstimatedCost": 137088,
+      "totalEstimatedCostCny": 229888,
+      "exchangeRate": 1.68,
+      "exchangeRateDate": "2026-09-07",
+      "exchangeRateNote": null,
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027待公布；October / March intake",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "October / March",
+          "deadlineType": "待公布",
+          "officialUrl": "https://study.um.edu.my/master-of-business-administration-coursework"
+        }
+      ],
+      "officialUniversityUrl": "https://www.um.edu.my",
+      "officialProgramUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "officialRequirementUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "officialAcademicRequirementUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "officialLanguageRequirementUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "officialWorkExperienceUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "officialDocumentRequirementUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "officialDeadlineUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "officialFeeUrl": "https://study.um.edu.my/master-of-business-administration-coursework",
+      "officialApplicationUrl": "https://maya.um.edu.my/",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/universiti-malaya-um",
+      "dataSource": [
+        "https://study.um.edu.my/master-of-business-administration-coursework",
+        "https://maya.um.edu.my/",
+        "https://www.topuniversities.com/universities/universiti-malaya-um"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Programme-level language and CGPA found on official Study@UM page; section minima were not listed."
+    },
+    {
+      "universityId": "uni-um",
+      "programId": "my-um-master-marketing",
+      "universityNameZh": "马来亚大学",
+      "universityNameEn": "Universiti Malaya",
+      "universityShortName": "UM",
+      "programNameZh": null,
+      "programNameEn": "Master of Marketing",
+      "programShortName": "Master of Marketing",
+      "subjectArea": "市场营销",
+      "subjectCategory": "市场营销",
+      "country": "马来西亚",
+      "region": "马来西亚",
+      "city": "Kuala Lumpur",
+      "degreeType": "Master",
+      "studyMode": "全日制",
+      "durationMonths": 12,
+      "durationLabel": "1年",
+      "durationText": "Full-time 2 semesters plus 1 special semester",
+      "intake": "October / March",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": "42 Credits",
+      "courseStructure": "36 core credits plus 6 elective credits, including marketing analytics, research project and sustainability-related electives.",
+      "completionRequirement": "Complete 42 credits and pass faculty interview/admission requirements.",
+      "qsRank": 58,
+      "qsRankLabel": "58",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through official alternative routes.",
+      "academicRequirementOriginal": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through official alternative routes.",
+      "academicScale": "official_text",
+      "minimumGpa": 3,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": 0.8,
+      "gradeRequirementSourceType": "official",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "No specific related-field restriction listed; interview is required.",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "Not required for CGPA 3.00+ route; one year related work experience can support CGPA 2.50-2.99 route.",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through official alternative routes.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": 3,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": 0.8
+      },
+      "backgroundRequirements": {
+        "original": "No specific related-field restriction listed; interview is required.",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "Not required for CGPA 3.00+ route; one year related work experience can support CGPA 2.50-2.99 route.",
+        "required": false,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": 60100,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "applicationLinks": {
+        "program": "https://study.um.edu.my/master-of-marketing-coursework",
+        "admission": "https://study.um.edu.my/master-of-marketing-coursework",
+        "language": "https://study.um.edu.my/master-of-marketing-coursework",
+        "academic": "https://study.um.edu.my/master-of-marketing-coursework",
+        "tuition": "https://study.um.edu.my/master-of-marketing-coursework",
+        "deadline": "https://study.um.edu.my/master-of-marketing-coursework",
+        "application": "https://maya.um.edu.my/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic: Band 6.0"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 60,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT Centre-Based: Score 60"
+        },
+        {
+          "test": "PTE",
+          "overall": 59,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "PTE Academic: Score 59"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.0 · TOEFL iBT 60 · PTE Academic 59",
+      "languageRequirementDetails": "UM programme page lists IELTS Academic Band 6.0; no IELTS section minima were shown on the page.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "官网未列单项最低分",
+          "tone": "pending"
+        },
+        {
+          "label": "面试",
+          "value": "Required",
+          "tone": "pending"
+        }
+      ],
+      "tuition": 60100,
+      "tuitionCny": 100968,
+      "tuitionCurrency": "MYR",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 24000,
+      "accommodationCost": 24000,
+      "insuranceCost": 2000,
+      "visaAndApplicationCost": 4500,
+      "transportCost": 4000,
+      "otherCost": 10000,
+      "totalEstimatedCost": 98500,
+      "totalEstimatedCostCny": 165468,
+      "exchangeRate": 1.68,
+      "exchangeRateDate": "2026-09-07",
+      "exchangeRateNote": null,
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027待公布；October / March intake",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "October / March",
+          "deadlineType": "待公布",
+          "officialUrl": "https://study.um.edu.my/master-of-marketing-coursework"
+        }
+      ],
+      "officialUniversityUrl": "https://www.um.edu.my",
+      "officialProgramUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "officialRequirementUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "officialAcademicRequirementUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "officialLanguageRequirementUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "officialWorkExperienceUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "officialDocumentRequirementUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "officialDeadlineUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "officialFeeUrl": "https://study.um.edu.my/master-of-marketing-coursework",
+      "officialApplicationUrl": "https://maya.um.edu.my/",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/universiti-malaya-um",
+      "dataSource": [
+        "https://study.um.edu.my/master-of-marketing-coursework",
+        "https://maya.um.edu.my/",
+        "https://www.topuniversities.com/universities/universiti-malaya-um"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Strong fit for SDG, sustainable consumption, ESG and digital marketing positioning; official page lists IELTS 6.0 and CGPA routes."
+    },
+    {
+      "universityId": "uni-um",
+      "programId": "my-um-master-accounting",
+      "universityNameZh": "马来亚大学",
+      "universityNameEn": "Universiti Malaya",
+      "universityShortName": "UM",
+      "programNameZh": null,
+      "programNameEn": "Master of Accounting",
+      "programShortName": "Master of Accounting",
+      "subjectArea": "会计与商科",
+      "subjectCategory": "会计与商科",
+      "country": "马来西亚",
+      "region": "马来西亚",
+      "city": "Kuala Lumpur",
+      "degreeType": "Master",
+      "studyMode": "全日制",
+      "durationMonths": 18,
+      "durationLabel": "1.5年",
+      "durationText": "Full-time 3 semesters",
+      "intake": "October / March",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": "42 Credits",
+      "courseStructure": "Accounting coursework and applied/research components.",
+      "completionRequirement": "Complete 42 credits and faculty requirements.",
+      "qsRank": 58,
+      "qsRankLabel": "58",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through official alternative routes.",
+      "academicRequirementOriginal": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through official alternative routes.",
+      "academicScale": "official_text",
+      "minimumGpa": 3,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": 0.8,
+      "gradeRequirementSourceType": "official",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "Accounting, business or related quantitative/commercial background is suitable; final assessment follows faculty rules.",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "Not required for the main CGPA 3.00+ route; related experience can support alternative route.",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "Bachelor's degree with CGPA not less than 3.00; CGPA 2.50-2.99 may be considered through official alternative routes.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": 3,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": 0.8
+      },
+      "backgroundRequirements": {
+        "original": "Accounting, business or related quantitative/commercial background is suitable; final assessment follows faculty rules.",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "Not required for the main CGPA 3.00+ route; related experience can support alternative route.",
+        "required": false,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": 62100,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "applicationLinks": {
+        "program": "https://study.um.edu.my/master-of-accounting-coursework",
+        "admission": "https://study.um.edu.my/master-of-accounting-coursework",
+        "language": "https://study.um.edu.my/master-of-accounting-coursework",
+        "academic": "https://study.um.edu.my/master-of-accounting-coursework",
+        "tuition": "https://study.um.edu.my/master-of-accounting-coursework",
+        "deadline": "https://study.um.edu.my/master-of-accounting-coursework",
+        "application": "https://maya.um.edu.my/"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Academic: Band 6.0"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 60,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT Centre-Based: Score 60"
+        },
+        {
+          "test": "PTE",
+          "overall": 59,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "PTE Academic: Score 59"
+        }
+      ],
+      "languageRequirementRaw": "IELTS Academic 6.0 · TOEFL iBT 60 · PTE Academic 59",
+      "languageRequirementDetails": "UM programme page lists IELTS Academic Band 6.0; no IELTS section minima were shown on the page.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "官网未列单项最低分",
+          "tone": "pending"
+        }
+      ],
+      "tuition": 62100,
+      "tuitionCny": 104328,
+      "tuitionCurrency": "MYR",
+      "tuitionPeriod": "完整学制",
+      "livingCost": 36000,
+      "accommodationCost": 36000,
+      "insuranceCost": 2500,
+      "visaAndApplicationCost": 4500,
+      "transportCost": 6000,
+      "otherCost": 12000,
+      "totalEstimatedCost": 118648,
+      "totalEstimatedCostCny": 199328,
+      "exchangeRate": 1.68,
+      "exchangeRateDate": "2026-09-07",
+      "exchangeRateNote": null,
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "MYR",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027待公布；October / March intake",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "October / March",
+          "deadlineType": "待公布",
+          "officialUrl": "https://study.um.edu.my/master-of-accounting-coursework"
+        }
+      ],
+      "officialUniversityUrl": "https://www.um.edu.my",
+      "officialProgramUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "officialRequirementUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "officialAcademicRequirementUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "officialLanguageRequirementUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "officialWorkExperienceUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "officialDocumentRequirementUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "officialDeadlineUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "officialFeeUrl": "https://study.um.edu.my/master-of-accounting-coursework",
+      "officialApplicationUrl": "https://maya.um.edu.my/",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/universiti-malaya-um",
+      "dataSource": [
+        "https://study.um.edu.my/master-of-accounting-coursework",
+        "https://maya.um.edu.my/",
+        "https://www.topuniversities.com/universities/universiti-malaya-um"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Official page supports IELTS 6.0 and CGPA 3.00 route; accounting background should be checked against final faculty assessment."
+    },
+    {
+      "universityId": "uni-taylors",
+      "programId": "my-taylors-master-management",
+      "universityNameZh": "泰莱大学",
+      "universityNameEn": "Taylor's University",
+      "universityShortName": "Taylor's",
+      "programNameZh": null,
+      "programNameEn": "Master of Management",
+      "programShortName": "Master of Management",
+      "subjectArea": "管理学",
+      "subjectCategory": "管理学",
+      "country": "马来西亚",
+      "region": "马来西亚",
+      "city": "Subang Jaya",
+      "degreeType": "Master",
+      "studyMode": "全日制/非全日制",
+      "durationMonths": 12,
+      "durationLabel": "全日制至少1年",
+      "durationText": "1 year full-time or 2-5 years part-time",
+      "intake": "February / April / June / September / November",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": "40 Credits",
+      "courseStructure": "Core management modules, research methodology and project-based learning.",
+      "completionRequirement": "Complete the credit and assessment requirements stated by Taylor's Business School.",
+      "qsRank": 272,
+      "qsRankLabel": "272",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "Bachelor's degree in the field or related fields with CGPA >= 2.75; CGPA 2.50-2.74 can be considered with 2 years related work experience and rigorous internal assessment.",
+      "academicRequirementOriginal": "Bachelor's degree in the field or related fields with CGPA >= 2.75; CGPA 2.50-2.74 can be considered with 2 years related work experience and rigorous internal assessment.",
+      "academicScale": "official_text",
+      "minimumGpa": 2.75,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": 0.74,
+      "gradeRequirementSourceType": "official",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "Management, business, economics or related fields fit the main route; non-standard backgrounds need internal assessment.",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "Not required for the main CGPA 2.75+ related-field route; work experience supports lower-CGPA routes.",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "Bachelor's degree in the field or related fields with CGPA >= 2.75; CGPA 2.50-2.74 can be considered with 2 years related work experience and rigorous internal assessment.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": 2.75,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": 0.74
+      },
+      "backgroundRequirements": {
+        "original": "Management, business, economics or related fields fit the main route; non-standard backgrounds need internal assessment.",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "Not required for the main CGPA 2.75+ related-field route; work experience supports lower-CGPA routes.",
+        "required": false,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": null,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "applicationLinks": {
+        "program": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+        "admission": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+        "language": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+        "academic": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+        "tuition": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+        "deadline": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+        "application": "https://university.taylors.edu.my/en/study/how-to-apply.html"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS Band 6.0"
+        },
+        {
+          "test": "TOEFL",
+          "overall": 60,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "TOEFL iBT 60"
+        },
+        {
+          "test": "PTE",
+          "overall": 59,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "PTE Academic 59"
+        }
+      ],
+      "languageRequirementRaw": "IELTS 6.0 · TOEFL iBT 60 · PTE Academic 59",
+      "languageRequirementDetails": "Taylor's programme page lists IELTS 6.0 and equivalent English tests; IELTS section minima were not listed.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "官网未列单项最低分",
+          "tone": "pending"
+        }
+      ],
+      "tuition": null,
+      "tuitionCny": null,
+      "tuitionCurrency": "",
+      "tuitionPeriod": "完整学制",
+      "livingCost": null,
+      "accommodationCost": null,
+      "insuranceCost": null,
+      "visaAndApplicationCost": null,
+      "transportCost": null,
+      "otherCost": null,
+      "totalEstimatedCost": null,
+      "totalEstimatedCostCny": null,
+      "exchangeRate": null,
+      "exchangeRateDate": null,
+      "exchangeRateNote": null,
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027日期尚未公布",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "February / April / June / September / November",
+          "deadlineType": "待公布",
+          "officialUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html"
+        }
+      ],
+      "officialUniversityUrl": "https://university.taylors.edu.my/",
+      "officialProgramUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "officialRequirementUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "officialAcademicRequirementUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "officialLanguageRequirementUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "officialWorkExperienceUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "officialDocumentRequirementUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "officialDeadlineUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "officialFeeUrl": "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+      "officialApplicationUrl": "https://university.taylors.edu.my/en/study/how-to-apply.html",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/world-university-rankings?countries=my&items_per_page=150",
+      "dataSource": [
+        "https://university.taylors.edu.my/en/study/explore-all-programmes/business/master-coursework/master-of-management.html",
+        "https://university.taylors.edu.my/en/study/how-to-apply.html",
+        "https://www.topuniversities.com/world-university-rankings?countries=my&items_per_page=150"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Good low-threshold management option; 2027 fee needs final update when Taylor's publishes next fee table."
+    },
+    {
+      "universityId": "uni-apu",
+      "programId": "my-apu-msc-global-marketing-management",
+      "universityNameZh": "亚太科技大学",
+      "universityNameEn": "Asia Pacific University of Technology and Innovation",
+      "universityShortName": "APU",
+      "programNameZh": null,
+      "programNameEn": "MSc in Global Marketing Management",
+      "programShortName": "MSc Global Marketing Management",
+      "subjectArea": "全球营销管理",
+      "subjectCategory": "全球营销管理",
+      "country": "马来西亚",
+      "region": "马来西亚",
+      "city": "Kuala Lumpur",
+      "degreeType": "MSc",
+      "studyMode": "全日制/ODL路径以官网为准",
+      "durationMonths": 12,
+      "durationLabel": "1年",
+      "durationText": "Normally 12-18 months depending on delivery route.",
+      "intake": "2027 intake to be confirmed",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": null,
+      "courseStructure": null,
+      "completionRequirement": "Complete APU postgraduate coursework and project/dissertation requirements.",
+      "qsRank": 528,
+      "qsRankLabel": "=528",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "APU postgraduate brochure lists business/management master routes with related bachelor's CGPA thresholds around 2.50-2.75 depending on programme and background; programme page/application system should be checked before submission.",
+      "academicRequirementOriginal": "APU postgraduate brochure lists business/management master routes with related bachelor's CGPA thresholds around 2.50-2.75 depending on programme and background; programme page/application system should be checked before submission.",
+      "academicScale": "official_text",
+      "minimumGpa": 2.5,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": 0.7,
+      "gradeRequirementSourceType": "official",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "Marketing, management, business, economics or related field is preferred; non-related fields may need prerequisites/internal assessment.",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "Work experience mainly supports lower-CGPA or non-related background routes.",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "APU postgraduate brochure lists business/management master routes with related bachelor's CGPA thresholds around 2.50-2.75 depending on programme and background; programme page/application system should be checked before submission.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": 2.5,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": 0.7
+      },
+      "backgroundRequirements": {
+        "original": "Marketing, management, business, economics or related field is preferred; non-related fields may need prerequisites/internal assessment.",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "Work experience mainly supports lower-CGPA or non-related background routes.",
+        "required": true,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": null,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.apu.edu.my/course/msc-in-global-marketing-management",
+      "applicationLinks": {
+        "program": "https://www.apu.edu.my/course/msc-in-global-marketing-management",
+        "admission": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "language": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "academic": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "tuition": "https://www.apu.edu.my/course/msc-in-global-marketing-management",
+        "deadline": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "application": "https://www.apu.edu.my/apply-now"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS 6.0"
+        }
+      ],
+      "languageRequirementRaw": "IELTS 6.0",
+      "languageRequirementDetails": "APU postgraduate brochure lists IELTS 6.0 for selected business/management postgraduate programmes; IELTS section minima were not listed in the brochure excerpt.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "官网手册未列单项最低分",
+          "tone": "pending"
+        },
+        {
+          "label": "来源层级",
+          "value": "官方PG手册",
+          "tone": "pending"
+        }
+      ],
+      "tuition": null,
+      "tuitionCny": null,
+      "tuitionCurrency": "",
+      "tuitionPeriod": "完整学制",
+      "livingCost": null,
+      "accommodationCost": null,
+      "insuranceCost": null,
+      "visaAndApplicationCost": null,
+      "transportCost": null,
+      "otherCost": null,
+      "totalEstimatedCost": null,
+      "totalEstimatedCostCny": null,
+      "exchangeRate": null,
+      "exchangeRateDate": null,
+      "exchangeRateNote": null,
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027日期尚未公布",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "2027 intake to be confirmed",
+          "deadlineType": "待公布",
+          "officialUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ"
+        }
+      ],
+      "officialUniversityUrl": "https://www.apu.edu.my/",
+      "officialProgramUrl": "https://www.apu.edu.my/course/msc-in-global-marketing-management",
+      "officialRequirementUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialAcademicRequirementUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialLanguageRequirementUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialWorkExperienceUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialDocumentRequirementUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialDeadlineUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialFeeUrl": "https://www.apu.edu.my/course/msc-in-global-marketing-management",
+      "officialApplicationUrl": "https://www.apu.edu.my/apply-now",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/asia-pacific-university-technology-innovation-apu-malaysia",
+      "dataSource": [
+        "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "https://www.apu.edu.my/course/msc-in-global-marketing-management",
+        "https://www.topuniversities.com/universities/asia-pacific-university-technology-innovation-apu-malaysia"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Official brochure supports the low IELTS direction, but final programme page should be rechecked before formal application."
+    },
+    {
+      "universityId": "uni-apu",
+      "programId": "my-apu-msc-business-analytics",
+      "universityNameZh": "亚太科技大学",
+      "universityNameEn": "Asia Pacific University of Technology and Innovation",
+      "universityShortName": "APU",
+      "programNameZh": null,
+      "programNameEn": "MSc in Data Science and Business Analytics",
+      "programShortName": "MSc Data Science and Business Analytics",
+      "subjectArea": "商业分析",
+      "subjectCategory": "商业分析",
+      "country": "马来西亚",
+      "region": "马来西亚",
+      "city": "Kuala Lumpur",
+      "degreeType": "MSc",
+      "studyMode": "全日制/ODL路径以官网为准",
+      "durationMonths": 12,
+      "durationLabel": "1年",
+      "durationText": "1年",
+      "intake": "2027 intake to be confirmed",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": null,
+      "courseStructure": null,
+      "completionRequirement": null,
+      "qsRank": 528,
+      "qsRankLabel": "=528",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "APU official postgraduate brochure lists MSc Data Science and Business Analytics admission through computing/related or non-related bachelor's routes, generally with CGPA 2.50 and internal assessment/prerequisite alternatives.",
+      "academicRequirementOriginal": "APU official postgraduate brochure lists MSc Data Science and Business Analytics admission through computing/related or non-related bachelor's routes, generally with CGPA 2.50 and internal assessment/prerequisite alternatives.",
+      "academicScale": "official_text",
+      "minimumGpa": 2.5,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": 0.7,
+      "gradeRequirementSourceType": "official",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "Computing, mathematics, statistics, economics, business analytics or related quantitative background is preferred; non-related backgrounds may need prerequisite courses.",
+      "prerequisiteCourses": "Quantitative, computing or analytics foundation may be required for non-related applicants.",
+      "mathematicsRequirement": "Quantitative, computing or analytics foundation may be required for non-related applicants.",
+      "workExperienceRequirement": "Relevant experience can support non-related/lower-CGPA routes.",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "APU official postgraduate brochure lists MSc Data Science and Business Analytics admission through computing/related or non-related bachelor's routes, generally with CGPA 2.50 and internal assessment/prerequisite alternatives.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": 2.5,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": 0.7
+      },
+      "backgroundRequirements": {
+        "original": "Computing, mathematics, statistics, economics, business analytics or related quantitative background is preferred; non-related backgrounds may need prerequisite courses.",
+        "prerequisiteCourses": "Quantitative, computing or analytics foundation may be required for non-related applicants.",
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "Relevant experience can support non-related/lower-CGPA routes.",
+        "required": true,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": null,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.apu.edu.my/course/msc-in-data-science-and-business-analytics",
+      "applicationLinks": {
+        "program": "https://www.apu.edu.my/course/msc-in-data-science-and-business-analytics",
+        "admission": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "language": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "academic": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "tuition": "https://www.apu.edu.my/course/msc-in-data-science-and-business-analytics",
+        "deadline": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "application": "https://www.apu.edu.my/apply-now"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 5.5,
+          "sectionMinimum": null,
+          "sectionMinimums": {
+            "reading": null,
+            "writing": null,
+            "listening": null,
+            "speaking": null
+          },
+          "raw": "IELTS 5.5"
+        }
+      ],
+      "languageRequirementRaw": "IELTS 5.5",
+      "languageRequirementDetails": "APU postgraduate brochure lists IELTS 5.5 for MSc Data Science and Business Analytics; this is below the 6.0 target and useful as a lower-language backup.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "官网手册未列单项最低分",
+          "tone": "pending"
+        },
+        {
+          "label": "定位",
+          "value": "低语言备选",
+          "tone": "good"
+        }
+      ],
+      "tuition": null,
+      "tuitionCny": null,
+      "tuitionCurrency": "",
+      "tuitionPeriod": "完整学制",
+      "livingCost": null,
+      "accommodationCost": null,
+      "insuranceCost": null,
+      "visaAndApplicationCost": null,
+      "transportCost": null,
+      "otherCost": null,
+      "totalEstimatedCost": null,
+      "totalEstimatedCostCny": null,
+      "exchangeRate": null,
+      "exchangeRateDate": null,
+      "exchangeRateNote": null,
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027日期尚未公布",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "2027 intake to be confirmed",
+          "deadlineType": "待公布",
+          "officialUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ"
+        }
+      ],
+      "officialUniversityUrl": "https://www.apu.edu.my/",
+      "officialProgramUrl": "https://www.apu.edu.my/course/msc-in-data-science-and-business-analytics",
+      "officialRequirementUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialAcademicRequirementUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialLanguageRequirementUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialWorkExperienceUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialDocumentRequirementUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialDeadlineUrl": "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+      "officialFeeUrl": "https://www.apu.edu.my/course/msc-in-data-science-and-business-analytics",
+      "officialApplicationUrl": "https://www.apu.edu.my/apply-now",
+      "officialScholarshipUrl": null,
+      "qsUrl": "https://www.topuniversities.com/universities/asia-pacific-university-technology-innovation-apu-malaysia",
+      "dataSource": [
+        "https://publicwebsite-media.apu.edu.my/assets/2026-01/2026_PG%20Brochure-min_0.pdf?VersionId=bcMQq1RRcl6uyV8Tpvb8fwT2G8VQA9cZ",
+        "https://www.apu.edu.my/course/msc-in-data-science-and-business-analytics",
+        "https://www.topuniversities.com/universities/asia-pacific-university-technology-innovation-apu-malaysia"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Included as a business analytics backup because language threshold is even lower than IELTS 6.0."
+    },
+    {
+      "universityId": "uni-utas",
+      "programId": "au-utas-master-global-logistics-scm",
+      "universityNameZh": "塔斯马尼亚大学",
+      "universityNameEn": "University of Tasmania",
+      "universityShortName": "UTAS",
+      "programNameZh": null,
+      "programNameEn": "Master of Global Logistics and Supply Chain Management",
+      "programShortName": "MGlobLogSCM",
+      "subjectArea": "供应链与管理",
+      "subjectCategory": "供应链与管理",
+      "country": "澳大利亚",
+      "region": "澳大利亚",
+      "city": "Launceston",
+      "degreeType": "Master",
+      "studyMode": "全日制/线上",
+      "durationMonths": 24,
+      "durationLabel": "2年",
+      "durationText": "2 years default; 1.5 years with cognate background or relevant work experience",
+      "intake": "Semester 1 / Semester 2",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": "16 units / 12 units with advanced standing",
+      "courseStructure": "Logistics, supply chain management, business analytics and research/industry project.",
+      "completionRequirement": "Complete the required units and research or industry-based project; advanced standing can reduce duration.",
+      "qsRank": 311,
+      "qsRankLabel": "311",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "Undergraduate degree from an Australian higher education institution or equivalent; Graduate Certificate/Diploma route; AQF Level 6 plus at least three years managerial work experience route.",
+      "academicRequirementOriginal": "Undergraduate degree from an Australian higher education institution or equivalent; Graduate Certificate/Diploma route; AQF Level 6 plus at least three years managerial work experience route.",
+      "academicScale": "official_text",
+      "minimumGpa": null,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": null,
+      "gradeRequirementSourceType": "manual_review",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "Business, logistics, supply chain management, maritime management or related background can support a shorter 1.5-year route.",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "Three years managerial work experience can support the AQF Level 6 route; cognate work experience may support advanced standing.",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "Undergraduate degree from an Australian higher education institution or equivalent; Graduate Certificate/Diploma route; AQF Level 6 plus at least three years managerial work experience route.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": null,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": null
+      },
+      "backgroundRequirements": {
+        "original": "Business, logistics, supply chain management, maritime management or related background can support a shorter 1.5-year route.",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "Three years managerial work experience can support the AQF Level 6 route; cognate work experience may support advanced standing.",
+        "required": true,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": 83948,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "applicationLinks": {
+        "program": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+        "admission": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+        "language": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+        "academic": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+        "tuition": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+        "deadline": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+        "application": "https://www.utas.edu.au/study/apply"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": 6,
+          "sectionMinimums": {
+            "reading": 6,
+            "writing": 6,
+            "listening": 6,
+            "speaking": 6
+          },
+          "raw": "IELTS 6.0, with no band less than 6.0"
+        }
+      ],
+      "languageRequirementRaw": "IELTS 6.0（各项不低于6.0）",
+      "languageRequirementDetails": "Official UTAS course page states IELTS 6.0 with no band less than 6.0.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "各项不低于6.0",
+          "tone": "good"
+        },
+        {
+          "label": "可减学制",
+          "value": "相关背景可申请1.5年路径",
+          "tone": "good"
+        }
+      ],
+      "tuition": 83948,
+      "tuitionCny": 394600,
+      "tuitionCurrency": "AUD",
+      "tuitionPeriod": "完整学制",
+      "livingCost": null,
+      "accommodationCost": null,
+      "insuranceCost": null,
+      "visaAndApplicationCost": null,
+      "transportCost": null,
+      "otherCost": null,
+      "totalEstimatedCost": 117948,
+      "totalEstimatedCostCny": 554400,
+      "exchangeRate": 4.7,
+      "exchangeRateDate": "2026-09-07",
+      "exchangeRateNote": "Planning rate AUD 1≈CNY 4.70; official tuition is indicative and subject to annual increase.",
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027日期尚未公布",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "Semester 1 / Semester 2",
+          "deadlineType": "待公布",
+          "officialUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management"
+        }
+      ],
+      "officialUniversityUrl": "https://www.utas.edu.au/",
+      "officialProgramUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "officialRequirementUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "officialAcademicRequirementUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "officialLanguageRequirementUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "officialWorkExperienceUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "officialDocumentRequirementUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "officialDeadlineUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "officialFeeUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+      "officialApplicationUrl": "https://www.utas.edu.au/study/apply",
+      "officialScholarshipUrl": "https://www.utas.edu.au/study/scholarships-fees-and-costs",
+      "qsUrl": "https://www.topuniversities.com/universities/university-tasmania",
+      "dataSource": [
+        "https://www.utas.edu.au/courses/sci-eng/courses/p7e-master-of-global-logistics-and-supply-chain-management",
+        "https://www.topuniversities.com/universities/university-tasmania"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Strong exact match for IELTS 6.0 plus each band 6.0; programme is management/commerce adjacent rather than pure economics."
+    },
+    {
+      "universityId": "uni-utas",
+      "programId": "au-utas-mba-maritime-management",
+      "universityNameZh": "塔斯马尼亚大学",
+      "universityNameEn": "University of Tasmania",
+      "universityShortName": "UTAS",
+      "programNameZh": null,
+      "programNameEn": "Master of Business Administration in Maritime Management",
+      "programShortName": "MBA Maritime Management",
+      "subjectArea": "工商管理与海事管理",
+      "subjectCategory": "工商管理与海事管理",
+      "country": "澳大利亚",
+      "region": "澳大利亚",
+      "city": "Launceston",
+      "degreeType": "MBA",
+      "studyMode": "全日制/线上",
+      "durationMonths": 24,
+      "durationLabel": "2年",
+      "durationText": "Normally 2 years; graduate certificate/diploma articulation route available",
+      "intake": "Semester 1 / Semester 2",
+      "intakeMonth": null,
+      "academicYear": "2027 Entry",
+      "admissionCycle": "2027 Entry",
+      "credits": "200 credit points",
+      "courseStructure": "MBA management core, maritime management, logistics and dissertation/industry project options.",
+      "completionRequirement": "Complete the MBA sequence and required dissertation or industry/project units.",
+      "qsRank": 311,
+      "qsRankLabel": "311",
+      "qsYear": 2027,
+      "qsIndependent": true,
+      "academicRequirement": "Undergraduate degree or equivalent plus at least two years work experience; Graduate Certificate/Diploma or professional maritime qualification routes are also listed.",
+      "academicRequirementOriginal": "Undergraduate degree or equivalent plus at least two years work experience; Graduate Certificate/Diploma or professional maritime qualification routes are also listed.",
+      "academicScale": "official_text",
+      "minimumGpa": null,
+      "minimumGrade": null,
+      "minimumPercentage": null,
+      "qualificationLevel": null,
+      "minimumAcademicScoreNormalized": null,
+      "gradeRequirementSourceType": "manual_review",
+      "gradeRequirementSourceLabel": null,
+      "gradeRequirementSourceUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "equivalentGradeRequirements": {},
+      "backgroundRequirement": "Business, maritime, logistics, supply chain, engineering or professional maritime background can fit the course routes.",
+      "prerequisiteCourses": null,
+      "mathematicsRequirement": null,
+      "workExperienceRequirement": "At least two years work experience is normally required for the direct undergraduate-degree route.",
+      "applicationMaterials": null,
+      "recommendationRequirement": null,
+      "personalStatementRequirement": null,
+      "portfolioRequirement": null,
+      "academicRequirements": {
+        "original": "Undergraduate degree or equivalent plus at least two years work experience; Graduate Certificate/Diploma or professional maritime qualification routes are also listed.",
+        "scale": "official_text",
+        "minimumGrade": null,
+        "minimumGpa": null,
+        "minimumPercentage": null,
+        "qualificationLevel": null,
+        "normalizedScore": null
+      },
+      "backgroundRequirements": {
+        "original": "Business, maritime, logistics, supply chain, engineering or professional maritime background can fit the course routes.",
+        "prerequisiteCourses": null,
+        "mathematicsRequirement": null
+      },
+      "workExperienceRequirements": {
+        "original": "At least two years work experience is normally required for the direct undergraduate-degree route.",
+        "required": true,
+        "minimumYears": null,
+        "fields": null,
+        "mbaOnly": false
+      },
+      "greGmatRequirements": {
+        "required": null,
+        "recommended": null,
+        "greMinimum": null,
+        "gmatMinimum": null,
+        "waiver": null
+      },
+      "documentRequirements": {
+        "personalStatement": null,
+        "statementOfPurpose": null,
+        "cv": null,
+        "references": null,
+        "transcript": null,
+        "degreeCertificate": null,
+        "writingSample": null,
+        "portfolio": null,
+        "researchProposal": null
+      },
+      "admissionRequirementScope": "program",
+      "languageRequirementScope": "program",
+      "tuitionAmount": 83948,
+      "tuitionAcademicYear": "2027 Entry",
+      "tuitionUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "applicationLinks": {
+        "program": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+        "admission": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+        "language": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+        "academic": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+        "tuition": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+        "deadline": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+        "application": "https://www.utas.edu.au/study/apply"
+      },
+      "languageRequirements": [
+        {
+          "test": "IELTS",
+          "overall": 6,
+          "sectionMinimum": 6,
+          "sectionMinimums": {
+            "reading": 6,
+            "writing": 6,
+            "listening": 6,
+            "speaking": 6
+          },
+          "raw": "IELTS 6.0, with no band less than 6.0"
+        }
+      ],
+      "languageRequirementRaw": "IELTS 6.0（各项不低于6.0）",
+      "languageRequirementDetails": "Official UTAS course page states IELTS 6.0 with no band less than 6.0.",
+      "languagePolicyFacts": [
+        {
+          "label": "IELTS小分",
+          "value": "各项不低于6.0",
+          "tone": "good"
+        },
+        {
+          "label": "工作经验",
+          "value": "通常需要2年",
+          "tone": "pending"
+        }
+      ],
+      "tuition": 83948,
+      "tuitionCny": 394600,
+      "tuitionCurrency": "AUD",
+      "tuitionPeriod": "完整学制",
+      "livingCost": null,
+      "accommodationCost": null,
+      "insuranceCost": null,
+      "visaAndApplicationCost": null,
+      "transportCost": null,
+      "otherCost": null,
+      "totalEstimatedCost": 117948,
+      "totalEstimatedCostCny": 554400,
+      "exchangeRate": 4.7,
+      "exchangeRateDate": "2026-09-07",
+      "exchangeRateNote": "Planning rate AUD 1≈CNY 4.70; official tuition is indicative and subject to annual increase.",
+      "costBreakdown": [
+        {
+          "key": "tuition",
+          "label": "学费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "fixed"
+        },
+        {
+          "key": "accommodation",
+          "label": "住宿或租房",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "living",
+          "label": "生活费",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "insurance",
+          "label": "医疗保险",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "visa",
+          "label": "签证及申请费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "transport",
+          "label": "当地交通",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        },
+        {
+          "key": "other",
+          "label": "其他费用",
+          "amountCny": null,
+          "amountOriginal": null,
+          "currency": "AUD",
+          "period": "完整学制",
+          "source": "官方页面尚未给出可结构化金额",
+          "type": "estimated"
+        }
+      ],
+      "costNotes": "费用未在项目页面结构化，申请前请打开官方费用入口核对。",
+      "scholarshipStatus": null,
+      "applicationDeadline": "2027日期尚未公布",
+      "applicationDeadlines": [
+        {
+          "roundName": "主要申请截止",
+          "deadlineDate": "2027 申请日期尚未公布",
+          "applicantType": "国际申请者",
+          "intake": "Semester 1 / Semester 2",
+          "deadlineType": "待公布",
+          "officialUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management"
+        }
+      ],
+      "officialUniversityUrl": "https://www.utas.edu.au/",
+      "officialProgramUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "officialRequirementUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "officialAcademicRequirementUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "officialLanguageRequirementUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "officialWorkExperienceUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "officialDocumentRequirementUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "officialDeadlineUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "officialFeeUrl": "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+      "officialApplicationUrl": "https://www.utas.edu.au/study/apply",
+      "officialScholarshipUrl": "https://www.utas.edu.au/study/scholarships-fees-and-costs",
+      "qsUrl": "https://www.topuniversities.com/universities/university-tasmania",
+      "dataSource": [
+        "https://www.utas.edu.au/courses/sci-eng/courses/p7h-master-of-business-administration-in-maritime-management",
+        "https://www.topuniversities.com/universities/university-tasmania"
+      ],
+      "lastUpdated": "2026-09-07",
+      "sourceLastChecked": "2026-09-07",
+      "verificationStatus": "needs_review",
+      "verificationNotes": "Strong exact match for IELTS 6.0 plus each band 6.0; work-experience requirement makes it less suitable for fresh graduates unless via articulated pathway."
     }
   ]
 }
